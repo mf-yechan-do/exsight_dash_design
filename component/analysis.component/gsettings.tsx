@@ -205,7 +205,7 @@ const Form = styled.form`
   div {
     display: table-cell;
   }
-  div :last-child {
+  div:last-child {
     padding-left: 20px;
   }
 `;
