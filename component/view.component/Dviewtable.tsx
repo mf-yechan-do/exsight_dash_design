@@ -3,6 +3,48 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export default function ViewTable() {
+  const rendering = () => {
+    const result = [];
+    for (let i = 0; i < 40; i++) {
+      result.push(
+        <tr>
+          <td>
+            <a>19297</a>
+          </td>
+          <td>PPFbT1c005</td>
+          <td>-</td>
+          <td>Black</td>
+          <td>225</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+      );
+    }
+    return result;
+  };
   return (
     <>
       <Container>
@@ -127,512 +169,39 @@ export default function ViewTable() {
                 <th>
                   <DThbar>2018/05/27</DThbar>
                 </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
+                <th>
+                  <DThbar>2018/05/27</DThbar>
+                </th>
                 <th></th>
               </tr>
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>{" "}
-              <tr>
-                <td>
-                  <a>19297</a>
-                </td>
-                <td>PPFbT1c005</td>
-                <td>-</td>
-                <td>Black</td>
-                <td>225</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td></td>
-              </tr>
+              {rendering()}
             </DatasetTable>
           </TableScroll>
         </Dataset>
@@ -648,6 +217,7 @@ const TableScroll = styled.div`
   overflow: scroll;
   height: calc(100vh - 585px);
   background: #ffffff;
+  min-height: 200px;
 `;
 
 const DatasetTable = styled.table`
@@ -668,65 +238,77 @@ const DatasetTable = styled.table`
   th:first-child {
     padding-left: 15px;
   }
-
+  th:last-child {
+    width: 100%;
+  }
   th:not(:last-of-type) {
-    min-width: 140px;
+    min-width: 80px;
   }
   th:nth-child(1) {
     background: #f2f2f2;
     position: sticky;
     left: 0px;
+    min-width: 100px;
     z-index: 1;
   }
   th:nth-child(2) {
     background: #f2f2f2;
     position: sticky;
-    left: 140px;
+    left: 100px;
+    min-width: 140px;
     z-index: 1;
   }
   th:nth-child(3) {
     background: #f2f2f2;
     position: sticky;
-    left: 280px;
+    min-width: 110px;
+    left: 240px;
     z-index: 1;
   }
   th:nth-child(4) {
     background: #f2f2f2;
     position: sticky;
-    left: 420px;
+    min-width: 110px;
+    left: 350px;
     z-index: 1;
   }
   th:nth-child(5) {
     background: #f2f2f2;
     position: sticky;
-    left: 560px;
+    min-width: 110px;
+    left: 460px;
     z-index: 1;
   }
   td:nth-child(1) {
     background: #fbfbfb;
     position: sticky;
+    min-width: 100px;
     left: 0;
     z-index: 1;
   }
   td:nth-child(2) {
     background: #fbfbfb;
     position: sticky;
-    left: 140px;
+    min-width: 140px;
+    left: 100px;
   }
   td:nth-child(3) {
     background: #fbfbfb;
     position: sticky;
-    left: 280px;
+    min-width: 110px;
+    left: 240px;
   }
   td:nth-child(4) {
     background: #fbfbfb;
     position: sticky;
-    left: 420px;
+    min-width: 110px;
+    left: 350px;
   }
   td:nth-child(5) {
     background: #fbfbfb;
     position: sticky;
-    left: 560px;
+    min-width: 110px;
+    left: 460px;
   }
 
   th {
@@ -793,7 +375,7 @@ const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   width: 100%;
-  min-width: 1500px;
+  min-width: 1600px;
 `;
 
 const Dataset = styled.div`

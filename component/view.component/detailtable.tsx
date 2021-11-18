@@ -31,7 +31,13 @@ export default function DetailTable() {
           </Title>
           <TableScroll>
             <DatasetTable>
-              <tr>
+              <tr
+                style={{
+                  position: "sticky",
+                  top: "0px",
+                  backgroundColor: "#f5f5f5",
+                }}
+              >
                 <th>
                   Dynamic Data
                   <img
@@ -154,7 +160,37 @@ export default function DetailTable() {
               <tr>
                 <td>Out_stock</td>
                 <td>SKU_info</td>
-                <td>Active</td>
+                <td>
+                  <span style={{ color: "#1D8102" }}>Active</span>
+                </td>
+                <td>Feature 1, Feature 2</td>
+                <td>2 Year</td>
+                <td>Min</td>
+                <td>Feature 1, Feature 2</td>
+                <td>Min</td>
+                <td>September 23, 2021 11:29 AM</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Out_stock</td>
+                <td>SKU_info</td>
+                <td>
+                  <span style={{ color: "#1D8102" }}>Active</span>
+                </td>
+                <td>Feature 1, Feature 2</td>
+                <td>2 Year</td>
+                <td>Min</td>
+                <td>Feature 1, Feature 2</td>
+                <td>Min</td>
+                <td>September 23, 2021 11:29 AM</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Out_stock</td>
+                <td>SKU_info</td>
+                <td>
+                  <span style={{ color: "#1D8102" }}>Active</span>
+                </td>
                 <td>Feature 1, Feature 2</td>
                 <td>2 Year</td>
                 <td>Min</td>
@@ -171,9 +207,15 @@ export default function DetailTable() {
   );
 }
 
+const DThbar = styled.div`
+  border-right: 1px solid #dddddd;
+`;
 const TableScroll = styled.div`
-  overflow-y: scroll;
+  overflow: scroll;
   height: 300px;
+  border-top: 1px solid #dddddd;
+  background: #ffffff;
+  min-height: 200px;
 `;
 
 const Search = styled.input`
@@ -202,9 +244,8 @@ const DatasetTable = styled.table`
   border-collapse: collapse;
   border-spacing: 0;
 
-  tr {
+  tr:not(:first-of-type) {
     border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
   }
   td:first-child {
     padding-left: 15px;
@@ -215,10 +256,12 @@ const DatasetTable = styled.table`
   }
 
   th:not(:last-of-type) {
-    width: 150px;
+    min-width: 180px;
+  }
+  th:last-child {
+    width: 100%;
   }
   th {
-    border-right: 1px solid #dddddd;
     height: 40px;
     text-align: left;
     color: #707070;
@@ -226,9 +269,6 @@ const DatasetTable = styled.table`
     font-weight: 500;
     position: relative;
     padding-left: 8px;
-    position: sticky;
-    top: 0px;
-    background: #f5f5f5;
     img {
       margin-bottom: -2px;
     }
@@ -308,6 +348,7 @@ const Dataset = styled.div`
   background: #f5f5f5;
   border: 1px solid #dddddd;
   opacity: 1;
+  min-width: 400px;
   h3 {
     margin: 0px;
     font-size: 1.125rem;

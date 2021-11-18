@@ -31,6 +31,45 @@ export default function Settings() {
             </Flex>
           </InfoBox>
           <InfoBox>
+            <h5>Frequency</h5>
+            <h6>Time period</h6>
+            <Form>
+              <div>
+                <input type="radio" value="None" /> <label>Years</label>
+                <br />
+                <input type="radio" value="Max" /> <label>Months</label>
+              </div>
+              <div>
+                <input type="radio" value="Min" /> <label>Days</label>
+                <br />
+                <input type="radio" value="Sum" /> <label>Hours</label>
+              </div>
+            </Form>
+            <h6
+              style={{
+                paddingTop: "25px",
+              }}
+            >
+              Aggregation
+            </h6>
+            <Form>
+              <div>
+                <input type="radio" value="None" /> <label>None</label>
+                <br />
+                <input type="radio" value="Max" /> <label>Max</label>
+                <br />
+                <input type="radio" value="Mean" /> <label>Mean</label>
+              </div>
+              <div>
+                <input type="radio" value="Min" /> <label>Min</label>
+                <br />
+                <input type="radio" value="Sum" /> <label>Sum</label>
+                <br />
+                <input type="radio" value="Count" /> <label>Count</label>
+              </div>
+            </Form>
+          </InfoBox>
+          <InfoBox>
             <h5>Group by</h5>
             <Flex>
               <GBox>
@@ -79,11 +118,24 @@ export default function Settings() {
             <p>※ Outlier or 비정상 데이터 표시</p>
           </InfoBox>
         </Info>
+        <BlueButton>Apply</BlueButton>
       </Container>
     </>
   );
 }
 
+const BlueButton = styled.button`
+  position: absolute;
+  margin: 7px 15px 10px 0px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: #ffff;
+  background-color: #254067;
+  border: 1px solid #254067;
+  padding: 2px 20px 5px 20px;
+  bottom: 0px;
+`;
 const Toggle = styled.div`
   padding-top: 15px;
 `;
@@ -172,7 +224,8 @@ const Container = styled.div`
   margin: 20px 40px 0px 10px;
   width: calc(75% - 50px);
   border: 1px solid #dddddd;
-  min-width: 1050px;
+  min-width: 1150px;
+  position: relative;
 `;
 
 const Title = styled.div`
@@ -196,6 +249,7 @@ const Title = styled.div`
 const Info = styled.div`
   background: #ffffff;
   display: flex;
+  height: 260px;
   h5 {
     margin: 0px;
     font-size: 0.875rem;

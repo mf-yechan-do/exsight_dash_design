@@ -11,71 +11,111 @@ export default function ViewTable() {
             <DatasetTable>
               <tr>
                 <th>
-                  Id
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
+                  <DThbar>
+                    Id
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </DThbar>
                 </th>
                 <th>
-                  Goods_code
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
+                  <DThbar>
+                    Goods_code
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </DThbar>
                 </th>
                 <th>
-                  Febric
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
+                  <DThbar>
+                    Febric
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </DThbar>
                 </th>
                 <th>
-                  Color
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
+                  <DThbar>
+                    Color
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </DThbar>
                 </th>
                 <th>
-                  Size
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
+                  <DThbar>
+                    Size
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </DThbar>
                 </th>
                 <th></th>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
               </tr>
               <tr>
                 <td>
@@ -95,40 +135,26 @@ export default function ViewTable() {
   );
 }
 
+const DThbar = styled.div`
+  border-right: 1px solid #dddddd;
+`;
 const TableScroll = styled.div`
-  overflow-y: scroll;
+  overflow: scroll;
   height: calc(100vh - 585px);
-`;
-
-const Search = styled.input`
-  font-size: 0.75rem;
-  width: 160px;
-  height: 27px;
-  color: rgba(59, 59, 59, 1);
-  right: 118px;
-  position: absolute;
-  margin-bottom: 20px;
-  padding: 0px 0px 0px 10px;
-  margin: 7px 0px 0px 0px;
-  border: solid 1px #aaaaaa;
   background: #ffffff;
-  font-weight: 300;
-
-  ::placeholder {
-    color: #dddddd;
-  }
-  background-image: url(/images/search_icon.svg);
-  background-position: 135px;
-  background-repeat: no-repeat;
+  min-height: 200px;
 `;
+
 const DatasetTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 
   tr {
+    background: #f2f2f2;
+  }
+  tr:not(:first-of-type) {
     border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
   }
   td:first-child {
     padding-left: 15px;
@@ -139,10 +165,13 @@ const DatasetTable = styled.table`
   }
 
   th:not(:last-of-type) {
-    width: 150px;
+    min-width: 140px;
+  }
+
+  th:last-child {
+    width: 100%;
   }
   th {
-    border-right: 1px solid #dddddd;
     height: 40px;
     text-align: left;
     color: #707070;
@@ -206,21 +235,7 @@ const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   width: 100%;
-`;
-const Location = styled.div`
-  padding-left: 40px;
-  p {
-    color: #707070;
-    font-size: 0.75rem;
-    margin: 0px;
-  }
-  img {
-    margin: 0px 8px -2px 8px;
-    height: 14px;
-  }
-  span {
-    color: #254067;
-  }
+  min-width: 1600px;
 `;
 
 const Dataset = styled.div`

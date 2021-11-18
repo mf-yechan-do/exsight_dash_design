@@ -73,6 +73,7 @@ const Info = styled.div`
   display: flex;
   padding: 10px 15px;
   height: calc(100% - 41px);
+  height: 260px;
   h6 {
     margin: 0px;
     font-size: 0.75rem;

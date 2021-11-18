@@ -138,7 +138,7 @@ export default function GSettings() {
             </InfoBox>
           </DInfo>
         </Flex>
-        <BlueButton>Add</BlueButton>
+        <BlueButton>Apply</BlueButton>
       </Container>
     </>
   );
@@ -231,7 +231,7 @@ const Container = styled.div`
   margin: 20px 40px 0px 40px;
   width: calc(100% - 80px);
   border: 1px solid #dddddd;
-  min-width: 1050px;
+  min-width: 1150px;
   position: relative;
 `;
 

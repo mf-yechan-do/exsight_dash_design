@@ -14,9 +14,7 @@ class Home extends Component {
           <InlineFlex>
             <Location>
               <p>
-                <a href="/home">
-                  <span>ExSight Dash</span>
-                </a>
+                <a href="/home">ExSight Dash</a>
               </p>
             </Location>
             <Main />

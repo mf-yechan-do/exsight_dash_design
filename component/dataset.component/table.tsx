@@ -347,6 +347,7 @@ const TableScroll = styled.div`
   height: calc(100vh - 180px);
   border-top: 1px solid #dddddd;
   background: #ffffff;
+  min-height: 200px;
 `;
 
 const Search = styled.input`

@@ -31,45 +31,6 @@ export default function Settings() {
             </Flex>
           </InfoBox>
           <InfoBox>
-            <h5>Frequency</h5>
-            <h6>Time period</h6>
-            <Form>
-              <div>
-                <input type="radio" value="None" /> <label>Years</label>
-                <br />
-                <input type="radio" value="Max" /> <label>Months</label>
-              </div>
-              <div>
-                <input type="radio" value="Min" /> <label>Days</label>
-                <br />
-                <input type="radio" value="Sum" /> <label>Hours</label>
-              </div>
-            </Form>
-            <h6
-              style={{
-                paddingTop: "25px",
-              }}
-            >
-              Aggregation
-            </h6>
-            <Form>
-              <div>
-                <input type="radio" value="None" /> <label>None</label>
-                <br />
-                <input type="radio" value="Max" /> <label>Max</label>
-                <br />
-                <input type="radio" value="Mean" /> <label>Mean</label>
-              </div>
-              <div>
-                <input type="radio" value="Min" /> <label>Min</label>
-                <br />
-                <input type="radio" value="Sum" /> <label>Sum</label>
-                <br />
-                <input type="radio" value="Count" /> <label>Count</label>
-              </div>
-            </Form>
-          </InfoBox>
-          <InfoBox>
             <h5>Group by</h5>
             <Flex>
               <GBox>
@@ -109,14 +70,60 @@ export default function Settings() {
           </InfoBox>
           <InfoBox>
             <h5>Highlight</h5>
-            <p>Outlier or 비정상 데이터 표시</p>
+            <Toggle>
+              <Switch>
+                <Checkbox type="checkbox" />
+                <span className="slider round"></span>
+              </Switch>
+            </Toggle>
+            <p>※ Outlier or 비정상 데이터 표시</p>
           </InfoBox>
         </Info>
+        <BlueButton>Apply</BlueButton>
       </Container>
     </>
   );
 }
 
+const Toggle = styled.div`
+  padding-top: 15px;
+`;
+const Switch = styled.label`
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+`;
+const Checkbox = styled.input`
+  :checked + .slider {
+    background-color: #254067;
+  }
+  :focus + .slider {
+    box-shadow: 0 0 1px #254067;
+  }
+  :checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+`;
+const BlueButton = styled.button`
+  position: absolute;
+  margin: 7px 15px 10px 0px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: #ffff;
+  background-color: #254067;
+  border: 1px solid #254067;
+  padding: 2px 20px 5px 20px;
+  bottom: 0px;
+`;
 const Search = styled.input`
   font-size: 0.75rem;
   width: 160px;
@@ -178,7 +185,8 @@ const Container = styled.div`
   margin: 20px 40px 0px 10px;
   width: calc(75% - 50px);
   border: 1px solid #dddddd;
-  min-width: 1050px;
+  min-width: 1150px;
+  position: relative;
 `;
 
 const Title = styled.div`
@@ -202,6 +210,7 @@ const Title = styled.div`
 const Info = styled.div`
   background: #ffffff;
   display: flex;
+  height: 260px;
   h5 {
     margin: 0px;
     font-size: 0.875rem;
@@ -218,10 +227,10 @@ const Info = styled.div`
   }
   p {
     margin: 0px;
-    font-size: 0.75rem;
-    color: #222222;
+    font-size: 0.625rem;
+    color: #707070;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-top: 20px;
   }
 `;
 
