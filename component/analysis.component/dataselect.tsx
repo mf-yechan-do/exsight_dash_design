@@ -88,22 +88,66 @@ export default function DataSelect() {
                       />
                     </DThbar>
                   </th>
+                  <th>
+                    <DThbar>
+                      Updated
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      Updated
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      Updated
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
+                  </th>
                   <th></th>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/Dview">Out_stock</a>
-                  </td>
+                  <td>Out_stock</td>
                   <td>Prj1</td>
                   <td>2021/01/03</td>
                   <td>2021/01/03</td>
                   <td></td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/view">SKU_info</a>
-                  </td>
+                  <td>SKU_info</td>
                   <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
                   <td>2021/01/03</td>
                   <td>2021/01/03</td>
                   <td></td>
@@ -216,9 +260,7 @@ export default function DataSelect() {
                   <th></th>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/Dview">Out_stock</a>
-                  </td>
+                  <td>Out_stock</td>
                   <td>Prj1</td>
                   <td>출고량</td>
                   <td>Dynamic Real</td>
@@ -227,9 +269,7 @@ export default function DataSelect() {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/view">SKU_info</a>
-                  </td>
+                  <td>SKU_info</td>
                   <td>Prj1</td>
                   <td>SKU 정보</td>
                   <td>Static</td>
@@ -345,9 +385,7 @@ export default function DataSelect() {
                   <th></th>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/Dview">Out_stock</a>
-                  </td>
+                  <td>Out_stock</td>
                   <td>Prj1</td>
                   <td>출고량</td>
                   <td>Dynamic Real</td>
@@ -356,9 +394,7 @@ export default function DataSelect() {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/view">SKU_info</a>
-                  </td>
+                  <td>SKU_info</td>
                   <td>Prj1</td>
                   <td>SKU 정보</td>
                   <td>Static</td>
@@ -468,9 +504,7 @@ export default function DataSelect() {
                   <th></th>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/Dview">Out_stock</a>
-                  </td>
+                  <td>Out_stock</td>
                   <td>Prj1</td>
                   <td>출고량</td>
                   <td>Dynamic Real</td>
@@ -479,9 +513,7 @@ export default function DataSelect() {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="/view">SKU_info</a>
-                  </td>
+                  <td>SKU_info</td>
                   <td>Prj1</td>
                   <td>SKU 정보</td>
                   <td>Static</td>
@@ -505,12 +537,12 @@ const DThbar = styled.div`
   border-right: 1px solid #dddddd;
 `;
 const TableScroll = styled.div`
-  overflow-y: scroll;
+  overflow: scroll;
   height: 200px;
   background: #ffffff;
 `;
 const BlueTableScroll = styled.div`
-  overflow-y: scroll;
+  overflow: scroll;
   height: 200px;
   background: #ffffff;
 `;
@@ -556,7 +588,7 @@ const SelectedDatasetTable = styled.table`
   }
 
   th:not(:last-of-type) {
-    width: 150px;
+    min-width: 150px;
   }
   th {
     height: 40px;
@@ -625,7 +657,7 @@ const DatasetTable = styled.table`
   }
 
   th:not(:last-of-type) {
-    width: 150px;
+    min-width: 150px;
   }
   th {
     height: 40px;
@@ -707,7 +739,7 @@ const SelectedDataset = styled.div`
   background: #254067;
   border: 1px solid #dddddd;
   opacity: 1;
-  width: 50%;
+  width: calc(50% - 15px);
   h3 {
     margin: 0px;
     font-size: 1.125rem;
@@ -726,7 +758,7 @@ const Dataset = styled.div`
   background: #f5f5f5;
   border: 1px solid #dddddd;
   opacity: 1;
-  width: 50%;
+  width: calc(50% - 15px);
   h3 {
     margin: 0px;
     font-size: 1.125rem;

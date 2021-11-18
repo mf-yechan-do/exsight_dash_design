@@ -213,7 +213,6 @@ const DThbar = styled.div`
 const TableScroll = styled.div`
   overflow: scroll;
   height: 300px;
-  border-top: 1px solid #dddddd;
   background: #ffffff;
   min-height: 200px;
 `;

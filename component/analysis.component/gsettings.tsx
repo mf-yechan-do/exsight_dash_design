@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
-const TabitemBar2 = styled.div`
+const TabitemBar3 = styled.div`
   border-right: 1px solid #dddddd;
   padding-right: 15px;
 `;
@@ -17,7 +17,7 @@ export default function GSettings() {
                 width: "100%",
               }}
             >
-              <TabitemBar2>Global Settings</TabitemBar2>
+              <TabitemBar3>Global Settings</TabitemBar3>
             </h3>
           </Title>
           <DTitle>
@@ -26,7 +26,6 @@ export default function GSettings() {
           </DTitle>
         </Flex>
         <Flex>
-          {" "}
           <Info>
             <InfoBox
               style={{
@@ -88,6 +87,7 @@ export default function GSettings() {
                   <h5>Period</h5>
                   <div
                     style={{
+                      marginTop: "5px",
                       border: "1px solid #AAAAAA",
                     }}
                   >
@@ -99,8 +99,30 @@ export default function GSettings() {
           </Info>
           <DInfo>
             <InfoBox>
-              <h5>Group by</h5>
               <Flex>
+                <h5>Group by</h5>
+                <Tab>
+                  <Tabitem
+                    style={{
+                      paddingRight: "12px",
+                    }}
+                  >
+                    frj 1
+                  </Tabitem>
+                  <Tabitem2>
+                    <TabitemBar2>frj 2</TabitemBar2>
+                  </Tabitem2>
+                  <Tabitem2>
+                    <TabitemBar2>frj 3</TabitemBar2>
+                  </Tabitem2>
+                </Tab>
+              </Flex>
+              <Flex>
+                <div
+                  style={{
+                    width: "80px",
+                  }}
+                ></div>
                 <GBox>
                   <h6>Feature List</h6>
                   <FBox></FBox>
@@ -143,6 +165,35 @@ export default function GSettings() {
     </>
   );
 }
+const Tabitem = styled.div`
+  display: inline-block;
+  background: #254067;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 2px 0px 3px 12px;
+`;
+const Tabitem2 = styled.div`
+  display: inline-block;
+  color: #707070;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 2px 0px 3px 12px;
+`;
+const TabitemBar2 = styled.div`
+  border-right: 1px solid #707070;
+  padding-right: 12px;
+`;
+const Tab = styled.div`
+  border-bottom: 2px solid #254067;
+  margin-bottom: 10px;
+  width: calc(100% - 80px);
+}
+`;
+const TabitemBar = styled.div`
+  border-right: 1px solid #adb7c6;
+  padding-right: 15px;
+`;
 const Input = styled.input`
   margin: 0px;
   font-size: 0.75rem;
@@ -156,6 +207,10 @@ const Input = styled.input`
   :last-of-type::-webkit-calendar-picker-indicator {
     background: url(/images/date.svg) no-repeat;
     background-position: 0px 3px;
+  }
+
+  :first-child::-webkit-calendar-picker-indicator {
+    display: none;
   }
 `;
 
@@ -214,13 +269,12 @@ const GBox = styled.div`
     margin-right: 10px;
   }
   :last-child {
-    height: 208px;
     overflow: hidden;
   }
 `;
 const FBox = styled.div`
   border: 1px solid #aaaaaa;
-  height: 160px;
+  height: 100px;
   width: 160px;
 `;
 const Flex = styled.div`
@@ -231,7 +285,7 @@ const Container = styled.div`
   margin: 20px 40px 0px 40px;
   width: calc(100% - 80px);
   border: 1px solid #dddddd;
-  min-width: 1150px;
+  min-width: 1200px;
   position: relative;
 `;
 
@@ -309,6 +363,7 @@ const DInfo = styled.div`
     color: #222222;
     padding-bottom: 3px;
     font-weight: 500;
+    width: 80px;
   }
   h6 {
     margin: 0px;

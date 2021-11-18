@@ -122,7 +122,7 @@ export default function Domain() {
             </TableScroll>
           </Dataset>
           <Dataset>
-            <h3>Prediction List</h3>
+            <h3>Domain Name:frj 2</h3>
             <Search
               type="text"
               id="Search"
@@ -133,82 +133,65 @@ export default function Domain() {
               <DatasetTable>
                 <tr>
                   <th>
-                    Name
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      Name
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
                   </th>
                   <th>
-                    Domain
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      Domain
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
+                  </th>
+
+                  <th>
+                    <DThbar>
+                      Created
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
                   </th>
                   <th>
-                    Description
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </th>
-                  <th>
-                    Data Type
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </th>
-                  <th>
-                    Created
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </th>
-                  <th>
-                    Updated
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      Updated
+                      <img
+                        src="/images/table_filter.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                      <img
+                        src="/images/table_align.svg"
+                        alt="mofl logo"
+                        height={14}
+                      />
+                    </DThbar>
                   </th>
                   <th></th>
                 </tr>
@@ -217,8 +200,6 @@ export default function Domain() {
                     <a href="/Dview">Out_stock</a>
                   </td>
                   <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
                   <td>2021/01/03</td>
                   <td>2021/01/03</td>
                   <td></td>
@@ -228,8 +209,6 @@ export default function Domain() {
                     <a href="/view">SKU_info</a>
                   </td>
                   <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
                   <td>2021/01/03</td>
                   <td>2021/01/03</td>
                   <td></td>

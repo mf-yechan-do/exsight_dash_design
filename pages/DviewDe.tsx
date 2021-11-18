@@ -44,6 +44,15 @@ class Static extends Component {
 
 export default Static;
 
+const Graph = styled.div`
+  min-height: 200px;
+  width: calc(100% - 80px);
+  margin: 20px 40px 40px 40px;
+  height: 800px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #dddddd;
+  opacity: 1;
+`;
 const ViewD = styled.div`
   padding-top: 25px;
   padding-left: 40px;
