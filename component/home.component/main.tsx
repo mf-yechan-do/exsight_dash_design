@@ -36,6 +36,7 @@ const Flex = styled.div`
 const InlineFlex = styled.div`
   width: calc(100% - 80px);
   margin: 20px 40px 20px 40px;
+  min-width: 700px;
   h1 {
     font-size: 1.75rem;
     margin: 0px;
@@ -46,7 +47,7 @@ const InlineFlex = styled.div`
 `;
 
 const Exp = styled.div`
-  min-width: 800px;
+  min-height: 200px;
   width: 100%;
   height: calc(50vh - 80px);
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -63,6 +64,7 @@ const Exp = styled.div`
   }
 `;
 const Resouces = styled.div`
+  min-height: 200px;
   width: calc(50% - 10px);
   height: calc(50vh - 80px);
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -78,6 +80,7 @@ const Resouces = styled.div`
   }
 `;
 const Status = styled.div`
+  min-height: 200px;
   margin-left: 20px;
   width: calc(50% - 10px);
   height: calc(50vh - 80px);

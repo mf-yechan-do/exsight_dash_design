@@ -97,7 +97,7 @@ export default function ViewTable() {
 
 const TableScroll = styled.div`
   overflow-y: scroll;
-  height: calc(100vh - 510px);
+  height: calc(100vh - 585px);
 `;
 
 const Search = styled.input`

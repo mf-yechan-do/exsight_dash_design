@@ -70,7 +70,13 @@ export default function Settings() {
           </InfoBox>
           <InfoBox>
             <h5>Highlight</h5>
-            <p>Outlier or 비정상 데이터 표시</p>
+            <Toggle>
+              <Switch>
+                <Checkbox type="checkbox" />
+                <span className="slider round"></span>
+              </Switch>
+            </Toggle>
+            <p>※ Outlier or 비정상 데이터 표시</p>
           </InfoBox>
         </Info>
       </Container>
@@ -78,6 +84,33 @@ export default function Settings() {
   );
 }
 
+const Toggle = styled.div`
+  padding-top: 15px;
+`;
+const Switch = styled.label`
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+`;
+const Checkbox = styled.input`
+  :checked + .slider {
+    background-color: #254067;
+  }
+  :focus + .slider {
+    box-shadow: 0 0 1px #254067;
+  }
+  :checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+`;
 const Search = styled.input`
   font-size: 0.75rem;
   width: 160px;
@@ -179,10 +212,10 @@ const Info = styled.div`
   }
   p {
     margin: 0px;
-    font-size: 0.75rem;
-    color: #222222;
+    font-size: 0.625rem;
+    color: #707070;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-top: 20px;
   }
 `;
 
