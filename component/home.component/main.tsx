@@ -48,7 +48,7 @@ const InlineFlex = styled.div`
 const Exp = styled.div`
   min-width: 800px;
   width: 100%;
-  height: 400px;
+  height: calc(50vh - 80px);
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #dddddd;
   opacity: 1;
@@ -64,7 +64,7 @@ const Exp = styled.div`
 `;
 const Resouces = styled.div`
   width: calc(50% - 10px);
-  height: 400px;
+  height: calc(50vh - 80px);
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #dddddd;
   opacity: 1;
@@ -80,7 +80,7 @@ const Resouces = styled.div`
 const Status = styled.div`
   margin-left: 20px;
   width: calc(50% - 10px);
-  height: 400px;
+  height: calc(50vh - 80px);
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #dddddd;
   opacity: 1;
