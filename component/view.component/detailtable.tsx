@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useState } from "react";
 
 const Title = styled.div`
   background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #dddddd;
   position: relative;
+  cursor: pointer;
   h3 {
     margin: 0px;
     font-size: 1.125rem;
@@ -21,186 +23,189 @@ const Title = styled.div`
   }
 `;
 export default function DetailTable() {
+  const [visible, setVisible] = React.useState(false);
   return (
     <>
       <Container>
         <Dataset>
-          <Title>
+          <Title onClick={() => setVisible(!visible)}>
             <h3>Settings History</h3>
             <img src="/images/big_arrow.svg" />
           </Title>
-          <TableScroll>
-            <DatasetTable>
-              <tr
-                style={{
-                  position: "sticky",
-                  top: "0px",
-                  backgroundColor: "#f5f5f5",
-                }}
-              >
-                <th>
-                  Dynamic Data
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Static Data
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Status
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Join Feature
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Time Period
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Aggregation
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Group by Feature
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Aggregation
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th>
-                  Version History
-                  <img
-                    src="/images/table_filter.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                  <img
-                    src="/images/table_align.svg"
-                    alt="mofl logo"
-                    height={14}
-                  />
-                </th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>Out_stock</td>
-                <td>SKU_info</td>
-                <td>
-                  <span style={{ color: "#1D8102" }}>Active</span>
-                </td>
-                <td>Feature 1, Feature 2</td>
-                <td>2 Year</td>
-                <td>Min</td>
-                <td>Feature 1, Feature 2</td>
-                <td>Min</td>
-                <td>September 23, 2021 11:29 AM</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Out_stock</td>
-                <td>SKU_info</td>
-                <td>
-                  <span style={{ color: "#1D8102" }}>Active</span>
-                </td>
-                <td>Feature 1, Feature 2</td>
-                <td>2 Year</td>
-                <td>Min</td>
-                <td>Feature 1, Feature 2</td>
-                <td>Min</td>
-                <td>September 23, 2021 11:29 AM</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Out_stock</td>
-                <td>SKU_info</td>
-                <td>
-                  <span style={{ color: "#1D8102" }}>Active</span>
-                </td>
-                <td>Feature 1, Feature 2</td>
-                <td>2 Year</td>
-                <td>Min</td>
-                <td>Feature 1, Feature 2</td>
-                <td>Min</td>
-                <td>September 23, 2021 11:29 AM</td>
-                <td></td>
-              </tr>
-            </DatasetTable>
-          </TableScroll>
+          {visible && (
+            <TableScroll>
+              <DatasetTable>
+                <tr
+                  style={{
+                    position: "sticky",
+                    top: "0px",
+                    backgroundColor: "#f5f5f5",
+                  }}
+                >
+                  <th>
+                    Dynamic Data
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Static Data
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Status
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Join Feature
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Time Period
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Aggregation
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Group by Feature
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Aggregation
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th>
+                    Version History
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                    <img
+                      src="/images/table_align.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />
+                  </th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </tr>
+              </DatasetTable>
+            </TableScroll>
+          )}
         </Dataset>
       </Container>
     </>
@@ -215,6 +220,9 @@ const TableScroll = styled.div`
   height: 300px;
   background: #ffffff;
   min-height: 200px;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 `;
 
 const Search = styled.input`
@@ -345,7 +353,6 @@ const Dataset = styled.div`
   position: relative;
   margin: 20px 40px 0px 40px;
   background: #f5f5f5;
-  border: 1px solid #dddddd;
   opacity: 1;
   min-width: 400px;
   h3 {

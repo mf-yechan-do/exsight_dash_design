@@ -1,43 +1,47 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useState } from "react";
 
 export default function OverView() {
+  const [visible, setVisible] = React.useState(false);
   return (
     <>
       <Container>
-        <Title>
+        <Title onClick={() => setVisible(!visible)}>
           <h3>OverView</h3>
           <img src="/images/big_arrow.svg" />
         </Title>
-        <Info>
-          <div>
-            <h6>Name</h6>
-            <p>Sku_info</p>
-            <h6>Domain</h6>
-            <p>Prj1</p>
-            <h6>Description</h6>
-            <p>SKU 정보</p>
-          </div>
-          <div>
-            <h6>Data Type</h6>
-            <p>Static</p>
-            <h6>Created</h6>
-            <p>2021/01/03</p>
-            <h6>Updated</h6>
-            <p>2021/01/03</p>
-          </div>
-          <div>
-            <h6>row and column</h6>
-            <p>-</p>
-            <h6>Data storage locaion</h6>
-            <p>
-              row:5
-              <br />
-              column:7
-            </p>
-          </div>
-        </Info>
+        {visible && (
+          <Info>
+            <div>
+              <h6>Name</h6>
+              <p>Sku_info</p>
+              <h6>Domain</h6>
+              <p>Prj1</p>
+              <h6>Description</h6>
+              <p>SKU 정보</p>
+            </div>
+            <div>
+              <h6>Data Type</h6>
+              <p>Static</p>
+              <h6>Created</h6>
+              <p>2021/01/03</p>
+              <h6>Updated</h6>
+              <p>2021/01/03</p>
+            </div>
+            <div>
+              <h6>row and column</h6>
+              <p>-</p>
+              <h6>Data storage locaion</h6>
+              <p>
+                row:5
+                <br />
+                column:7
+              </p>
+            </div>
+          </Info>
+        )}
       </Container>
     </>
   );
@@ -46,14 +50,14 @@ export default function OverView() {
 const Container = styled.div`
   margin: 20px 10px 0px 40px;
   width: calc(25% - 50px);
-  border: 1px solid #dddddd;
   min-width: 350px;
 `;
 
 const Title = styled.div`
   background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #dddddd;
   position: relative;
+  cursor: pointer;
   h3 {
     margin: 0px;
     font-size: 1.125rem;
@@ -74,6 +78,9 @@ const Info = styled.div`
   padding: 10px 15px;
   height: calc(100% - 41px);
   height: 260px;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   h6 {
     margin: 0px;
     font-size: 0.75rem;

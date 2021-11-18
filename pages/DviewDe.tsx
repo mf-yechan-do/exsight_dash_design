@@ -35,6 +35,7 @@ class Static extends Component {
               <h3>Detail</h3>
             </ViewD>
             <Detailtable />
+            <Graph></Graph>
           </InlineFlex>
         </Flex>
       </>

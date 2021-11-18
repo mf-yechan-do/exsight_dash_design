@@ -1,530 +1,542 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useState } from "react";
 
 export default function DataSelect() {
+  const [visible, setVisible] = React.useState(false);
   return (
     <>
       <Container>
-        <Title>
+        <Title onClick={() => setVisible(!visible)}>
           <h3>Dynamin Data, Prediction</h3>
           <img src="/images/big_arrow.svg" />
         </Title>
-        <Flex
-          style={{
-            background: "#ffffff",
-          }}
-        >
-          <Dataset>
-            <h3>Dynamic Data List</h3>
-            <Search
-              type="text"
-              id="Search"
-              name="Search"
-              placeholder="Search"
-            />
-            <BlueButton>Add</BlueButton>
-            <TableScroll>
-              <DatasetTable>
-                <tr>
-                  <th>
-                    <DThbar>
-                      Name
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Domain
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
+        {visible && (
+          <div
+            style={{
+              borderRight: "1px solid #dddddd",
+              borderLeft: "1px solid #dddddd",
+              borderBottom: "1px solid #dddddd",
+            }}
+          >
+            <Flex
+              style={{
+                background: "#ffffff",
+              }}
+            >
+              <Dataset>
+                <h3>Dynamic Data List</h3>
+                <Search
+                  type="text"
+                  id="Search"
+                  name="Search"
+                  placeholder="Search"
+                />
+                <BlueButton>Add</BlueButton>
+                <TableScroll>
+                  <DatasetTable>
+                    <tr>
+                      <th>
+                        <DThbar>
+                          Name
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Domain
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
 
-                  <th>
-                    <DThbar>
-                      Created
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Updated
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Updated
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Updated
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Updated
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td>Out_stock</td>
-                  <td>Prj1</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>SKU_info</td>
-                  <td>Prj1</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-              </DatasetTable>
-            </TableScroll>
-          </Dataset>
-          <Dataset>
-            <h3>Prediction List</h3>
-            <Search
-              type="text"
-              id="Search"
-              name="Search"
-              placeholder="Search"
-            />
-            <BlueButton>Add</BlueButton>
-            <TableScroll>
-              <DatasetTable>
-                <tr>
-                  <th>
-                    <DThbar>
-                      Name
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Domain
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Description
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Data Type
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Created
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      Updated
-                      <img
-                        src="/images/table_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/table_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </DThbar>
-                  </th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td>Out_stock</td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>SKU_info</td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-              </DatasetTable>
-            </TableScroll>
-          </Dataset>
-        </Flex>
-        <Flex
-          style={{
-            background: "#ffffff",
-          }}
-        >
-          <SelectedDataset>
-            <h3>Selected Dynamic Data</h3>
-            <WButton>Remove</WButton>
-            <BlueTableScroll>
-              <SelectedDatasetTable>
-                <tr>
-                  <th>
-                    <Thbar>
-                      Name
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Domain
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Description
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Data Type
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Created
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Updated
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td>Out_stock</td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>SKU_info</td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-              </SelectedDatasetTable>
-            </BlueTableScroll>
-          </SelectedDataset>
-          <SelectedDataset>
-            <h3>Selected Prediction</h3>
-            <WButton>Remove</WButton>
-            <BlueTableScroll>
-              <SelectedDatasetTable>
-                <tr>
-                  <th>
-                    <Thbar>
-                      Name
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Domain
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Description
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Data Type
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Created
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th>
-                    <Thbar>
-                      Updated
-                      <img
-                        src="/images/wtable_filter.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                      <img
-                        src="/images/wtable_align.svg"
-                        alt="mofl logo"
-                        height={14}
-                      />
-                    </Thbar>
-                  </th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td>Out_stock</td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>SKU_info</td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-              </SelectedDatasetTable>
-            </BlueTableScroll>
-          </SelectedDataset>
-        </Flex>
+                      <th>
+                        <DThbar>
+                          Created
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Updated
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Updated
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Updated
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Updated
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                  </DatasetTable>
+                </TableScroll>
+              </Dataset>
+              <Dataset>
+                <h3>Prediction List</h3>
+                <Search
+                  type="text"
+                  id="Search"
+                  name="Search"
+                  placeholder="Search"
+                />
+                <BlueButton>Add</BlueButton>
+                <TableScroll>
+                  <DatasetTable>
+                    <tr>
+                      <th>
+                        <DThbar>
+                          Name
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Domain
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Description
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Data Type
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Created
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th>
+                        <DThbar>
+                          Updated
+                          <img
+                            src="/images/table_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/table_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </DThbar>
+                      </th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                  </DatasetTable>
+                </TableScroll>
+              </Dataset>
+            </Flex>
+            <Flex
+              style={{
+                background: "#ffffff",
+              }}
+            >
+              <SelectedDataset>
+                <h3>Selected Dynamic Data</h3>
+                <WButton>Remove</WButton>
+                <BlueTableScroll>
+                  <SelectedDatasetTable>
+                    <tr>
+                      <th>
+                        <Thbar>
+                          Name
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Domain
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Description
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Data Type
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Created
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Updated
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                  </SelectedDatasetTable>
+                </BlueTableScroll>
+              </SelectedDataset>
+              <SelectedDataset>
+                <h3>Selected Prediction</h3>
+                <WButton>Remove</WButton>
+                <BlueTableScroll>
+                  <SelectedDatasetTable>
+                    <tr>
+                      <th>
+                        <Thbar>
+                          Name
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Domain
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Description
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Data Type
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Created
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th>
+                        <Thbar>
+                          Updated
+                          <img
+                            src="/images/wtable_filter.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                          <img
+                            src="/images/wtable_align.svg"
+                            alt="mofl logo"
+                            height={14}
+                          />
+                        </Thbar>
+                      </th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                  </SelectedDatasetTable>
+                </BlueTableScroll>
+              </SelectedDataset>
+            </Flex>
+          </div>
+        )}
       </Container>
     </>
   );
@@ -810,14 +822,14 @@ const Flex = styled.div`
 const Container = styled.div`
   margin: 20px 40px 0px 40px;
   width: calc(100% - 80px);
-  border: 1px solid #dddddd;
   min-width: 1050px;
 `;
 
 const Title = styled.div`
   background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #dddddd;
   position: relative;
+  cursor: pointer;
   h3 {
     margin: 0px;
     font-size: 1.125rem;

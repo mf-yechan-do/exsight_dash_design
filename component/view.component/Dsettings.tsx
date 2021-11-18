@@ -1,124 +1,128 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useState } from "react";
 
 export default function Settings() {
+  const [visible, setVisible] = React.useState(false);
   return (
     <>
       <Container>
-        <Title>
+        <Title onClick={() => setVisible(!visible)}>
           <h3>Settings</h3>
           <img src="/images/big_arrow.svg" />
         </Title>
-        <Info>
-          <InfoBox>
-            <h5>View</h5>
-            <Flex>
-              <GBox>
-                <h6>Feature List</h6>
-                <FBox></FBox>
-                <Search
-                  type="text"
-                  id="Search"
-                  name="Search"
-                  placeholder="Search"
-                />
-              </GBox>
-              <GBox>
-                <h6>Selected Feature</h6>
-                <FBox></FBox>
-              </GBox>
-            </Flex>
-          </InfoBox>
-          <InfoBox>
-            <h5>Frequency</h5>
-            <h6>Time period</h6>
-            <Form>
-              <div>
-                <input type="radio" value="None" /> <label>Years</label>
-                <br />
-                <input type="radio" value="Max" /> <label>Months</label>
-              </div>
-              <div>
-                <input type="radio" value="Min" /> <label>Days</label>
-                <br />
-                <input type="radio" value="Sum" /> <label>Hours</label>
-              </div>
-            </Form>
-            <h6
-              style={{
-                paddingTop: "25px",
-              }}
-            >
-              Aggregation
-            </h6>
-            <Form>
-              <div>
-                <input type="radio" value="None" /> <label>None</label>
-                <br />
-                <input type="radio" value="Max" /> <label>Max</label>
-                <br />
-                <input type="radio" value="Mean" /> <label>Mean</label>
-              </div>
-              <div>
-                <input type="radio" value="Min" /> <label>Min</label>
-                <br />
-                <input type="radio" value="Sum" /> <label>Sum</label>
-                <br />
-                <input type="radio" value="Count" /> <label>Count</label>
-              </div>
-            </Form>
-          </InfoBox>
-          <InfoBox>
-            <h5>Group by</h5>
-            <Flex>
-              <GBox>
-                <h6>Feature List</h6>
-                <FBox></FBox>
-                <Search
-                  type="text"
-                  id="Search"
-                  name="Search"
-                  placeholder="Search"
-                />
-              </GBox>
-              <GBox>
-                <h6>Selected Feature</h6>
-                <FBox></FBox>
-              </GBox>
-              <GBox>
-                <h6>Aggregation</h6>
-                <Form>
-                  <div>
-                    <input type="radio" value="None" /> <label>None</label>
-                    <br />
-                    <input type="radio" value="Max" /> <label>Max</label>
-                    <br />
-                    <input type="radio" value="Mean" /> <label>Mean</label>
-                  </div>
-                  <div>
-                    <input type="radio" value="Min" /> <label>Min</label>
-                    <br />
-                    <input type="radio" value="Sum" /> <label>Sum</label>
-                    <br />
-                    <input type="radio" value="Count" /> <label>Count</label>
-                  </div>
-                </Form>
-              </GBox>
-            </Flex>
-          </InfoBox>
-          <InfoBox>
-            <h5>Highlight</h5>
-            <Toggle>
-              <Switch>
-                <Checkbox type="checkbox" />
-                <span className="slider round"></span>
-              </Switch>
-            </Toggle>
-            <p>※ Outlier or 비정상 데이터 표시</p>
-          </InfoBox>
-        </Info>
-        <BlueButton>Apply</BlueButton>
+        {visible && (
+          <Info>
+            <InfoBox>
+              <h5>View</h5>
+              <Flex>
+                <GBox>
+                  <h6>Feature List</h6>
+                  <FBox></FBox>
+                  <Search
+                    type="text"
+                    id="Search"
+                    name="Search"
+                    placeholder="Search"
+                  />
+                </GBox>
+                <GBox>
+                  <h6>Selected Feature</h6>
+                  <FBox></FBox>
+                </GBox>
+              </Flex>
+            </InfoBox>
+            <InfoBox>
+              <h5>Frequency</h5>
+              <h6>Time period</h6>
+              <Form>
+                <div>
+                  <input type="radio" value="None" /> <label>Years</label>
+                  <br />
+                  <input type="radio" value="Max" /> <label>Months</label>
+                </div>
+                <div>
+                  <input type="radio" value="Min" /> <label>Days</label>
+                  <br />
+                  <input type="radio" value="Sum" /> <label>Hours</label>
+                </div>
+              </Form>
+              <h6
+                style={{
+                  paddingTop: "25px",
+                }}
+              >
+                Aggregation
+              </h6>
+              <Form>
+                <div>
+                  <input type="radio" value="None" /> <label>None</label>
+                  <br />
+                  <input type="radio" value="Max" /> <label>Max</label>
+                  <br />
+                  <input type="radio" value="Mean" /> <label>Mean</label>
+                </div>
+                <div>
+                  <input type="radio" value="Min" /> <label>Min</label>
+                  <br />
+                  <input type="radio" value="Sum" /> <label>Sum</label>
+                  <br />
+                  <input type="radio" value="Count" /> <label>Count</label>
+                </div>
+              </Form>
+            </InfoBox>
+            <InfoBox>
+              <h5>Group by</h5>
+              <Flex>
+                <GBox>
+                  <h6>Feature List</h6>
+                  <FBox></FBox>
+                  <Search
+                    type="text"
+                    id="Search"
+                    name="Search"
+                    placeholder="Search"
+                  />
+                </GBox>
+                <GBox>
+                  <h6>Selected Feature</h6>
+                  <FBox></FBox>
+                </GBox>
+                <GBox>
+                  <h6>Aggregation</h6>
+                  <Form>
+                    <div>
+                      <input type="radio" value="None" /> <label>None</label>
+                      <br />
+                      <input type="radio" value="Max" /> <label>Max</label>
+                      <br />
+                      <input type="radio" value="Mean" /> <label>Mean</label>
+                    </div>
+                    <div>
+                      <input type="radio" value="Min" /> <label>Min</label>
+                      <br />
+                      <input type="radio" value="Sum" /> <label>Sum</label>
+                      <br />
+                      <input type="radio" value="Count" /> <label>Count</label>
+                    </div>
+                  </Form>
+                </GBox>
+              </Flex>
+            </InfoBox>
+            <InfoBox>
+              <h5>Highlight</h5>
+              <Toggle>
+                <Switch>
+                  <Checkbox type="checkbox" />
+                  <span className="slider round"></span>
+                </Switch>
+              </Toggle>
+              <p>※ Outlier or 비정상 데이터 표시</p>
+            </InfoBox>
+          </Info>
+        )}
+        {visible && <BlueButton>Apply</BlueButton>}
       </Container>
     </>
   );
@@ -223,15 +227,15 @@ const Flex = styled.div`
 const Container = styled.div`
   margin: 20px 40px 0px 10px;
   width: calc(75% - 50px);
-  border: 1px solid #dddddd;
   min-width: 1150px;
   position: relative;
 `;
 
 const Title = styled.div`
   background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #dddddd;
   position: relative;
+  cursor: pointer;
   h3 {
     margin: 0px;
     font-size: 1.125rem;
@@ -250,6 +254,9 @@ const Info = styled.div`
   background: #ffffff;
   display: flex;
   height: 260px;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   h5 {
     margin: 0px;
     font-size: 0.875rem;

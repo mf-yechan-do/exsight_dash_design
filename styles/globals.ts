@@ -51,6 +51,7 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   line-height: 1.45 !important;
   font-family: "Noto Sans KR", sans-serif !important;
+  transition: all 0.5s;
 }
 .notion-collection {
   width:100%;

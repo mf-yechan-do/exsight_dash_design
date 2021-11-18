@@ -23,6 +23,7 @@ const Store = types
   .model({
     count: types.number,
     mode: types.string,
+    right: types.string,
     title: types.string,
     name: types.string,
     desc: types.string,
@@ -59,7 +60,8 @@ export function initializeStore(snapshot = null) {
   const _store = store ?? Store.create({
     count: 0,
     content_id: 0,
-      mode: "welcome",
+    mode: "25px",
+    right: "25px",
       title: "mofl",
       name: "reswr",
       desc: "desc",

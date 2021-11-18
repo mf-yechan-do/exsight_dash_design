@@ -1,17 +1,37 @@
-import React, { Component } from "react";
 import Top from "../component/top";
 import SideBar from "../component/sidebar";
 import Table from "../component/dataset.component/table";
 import styled from "styled-components";
+import React, { useState, Component } from "react";
+import { inject, observer } from "mobx-react";
+import { unprotect } from "mobx-state-tree";
+import { IStore } from "../store";
 
-class Dataset extends Component {
+type Props = {
+  store?: IStore;
+};
+
+@inject("store")
+@observer
+class Dataset extends Component<Props> {
   render() {
+    const control = () => {
+      if (store.mode === "15px") {
+        const _article = "calc(100% - 40px)";
+        return _article;
+      } else if (store.mode === "25px") {
+        const _article = "calc(100% - 280px)";
+        return _article;
+      }
+    };
+    const { store } = this.props;
+    unprotect(store);
     return (
       <>
         <Top />
         <Flex>
           <SideBar />
-          <InlineFlex>
+          <InlineFlex style={{ width: control() }}>
             <Location>
               <p>
                 <a href="/home">ExSight Dash</a>
@@ -33,7 +53,6 @@ const Flex = styled.div`
 `;
 
 const InlineFlex = styled.div`
-  width: calc(100% - 280px);
   h1 {
     font-size: 1.75rem;
     margin: 0px;

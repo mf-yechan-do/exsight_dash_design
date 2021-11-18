@@ -1,16 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useState } from "react";
 
 const TabitemBar3 = styled.div`
   border-right: 1px solid #dddddd;
   padding-right: 15px;
 `;
 export default function GSettings() {
+  const [visible, setVisible] = React.useState(false);
   return (
     <>
       <Container>
-        <Flex>
+        <Flex onClick={() => setVisible(!visible)}>
           <Title>
             <h3
               style={{
@@ -25,142 +27,150 @@ export default function GSettings() {
             <img src="/images/big_arrow.svg" />
           </DTitle>
         </Flex>
-        <Flex>
-          <Info>
-            <InfoBox
-              style={{
-                borderRight: "1px solid #dddddd",
-              }}
-            >
-              <Flex>
-                <div>
-                  <h5>Frequency</h5>
-                  <h6>Time period</h6>
-                  <Search type="text" id="No." name="No." placeholder="No." />
-                  <Form>
-                    <div>
-                      <input type="radio" value="None" /> <label>Years</label>
-                      <br />
-                      <input type="radio" value="Max" /> <label>Months</label>
-                    </div>
-                    <div>
-                      <input type="radio" value="Min" /> <label>Days</label>
-                      <br />
-                      <input type="radio" value="Sum" /> <label>Hours</label>
-                    </div>
-                  </Form>
-                </div>
-                <div
-                  style={{
-                    paddingLeft: "10px",
-                  }}
-                >
-                  <h6
-                    style={{
-                      paddingTop: "23px",
-                    }}
-                  >
-                    Aggregation
-                  </h6>
-                  <Form>
-                    <div>
-                      <input type="radio" value="None" /> <label>None</label>
-                      <br />
-                      <input type="radio" value="Max" /> <label>Max</label>
-                      <br />
-                      <input type="radio" value="Mean" /> <label>Mean</label>
-                    </div>
-                    <div>
-                      <input type="radio" value="Min" /> <label>Min</label>
-                      <br />
-                      <input type="radio" value="Sum" /> <label>Sum</label>
-                      <br />
-                      <input type="radio" value="Count" /> <label>Count</label>
-                    </div>
-                  </Form>
-                </div>
-                <div
-                  style={{
-                    paddingLeft: "10px",
-                  }}
-                >
-                  <h5>Period</h5>
+        {visible && (
+          <Flex
+            style={{
+              borderTop: "1px solid #dddddd",
+            }}
+          >
+            <Info>
+              <InfoBox
+                style={{
+                  borderRight: "1px solid #dddddd",
+                }}
+              >
+                <Flex>
+                  <div>
+                    <h5>Frequency</h5>
+                    <h6>Time period</h6>
+                    <Search type="text" id="No." name="No." placeholder="No." />
+                    <Form>
+                      <div>
+                        <input type="radio" value="None" /> <label>Years</label>
+                        <br />
+                        <input type="radio" value="Max" /> <label>Months</label>
+                      </div>
+                      <div>
+                        <input type="radio" value="Min" /> <label>Days</label>
+                        <br />
+                        <input type="radio" value="Sum" /> <label>Hours</label>
+                      </div>
+                    </Form>
+                  </div>
                   <div
                     style={{
-                      marginTop: "5px",
-                      border: "1px solid #AAAAAA",
+                      paddingLeft: "10px",
                     }}
                   >
-                    <Input type="date"></Input>~<Input type="date"></Input>
+                    <h6
+                      style={{
+                        paddingTop: "23px",
+                      }}
+                    >
+                      Aggregation
+                    </h6>
+                    <Form>
+                      <div>
+                        <input type="radio" value="None" /> <label>None</label>
+                        <br />
+                        <input type="radio" value="Max" /> <label>Max</label>
+                        <br />
+                        <input type="radio" value="Mean" /> <label>Mean</label>
+                      </div>
+                      <div>
+                        <input type="radio" value="Min" /> <label>Min</label>
+                        <br />
+                        <input type="radio" value="Sum" /> <label>Sum</label>
+                        <br />
+                        <input type="radio" value="Count" /> 
+                        <label>Count</label>
+                      </div>
+                    </Form>
                   </div>
-                </div>
-              </Flex>
-            </InfoBox>
-          </Info>
-          <DInfo>
-            <InfoBox>
-              <Flex>
-                <h5>Group by</h5>
-                <Tab>
-                  <Tabitem
+                  <div
                     style={{
-                      paddingRight: "12px",
+                      paddingLeft: "10px",
                     }}
                   >
-                    frj 1
-                  </Tabitem>
-                  <Tabitem2>
-                    <TabitemBar2>frj 2</TabitemBar2>
-                  </Tabitem2>
-                  <Tabitem2>
-                    <TabitemBar2>frj 3</TabitemBar2>
-                  </Tabitem2>
-                </Tab>
-              </Flex>
-              <Flex>
-                <div
-                  style={{
-                    width: "80px",
-                  }}
-                ></div>
-                <GBox>
-                  <h6>Feature List</h6>
-                  <FBox></FBox>
-                  <Search
-                    type="text"
-                    id="Search"
-                    name="Search"
-                    placeholder="Search"
-                  />
-                </GBox>
-                <GBox>
-                  <h6>Selected Feature</h6>
-                  <FBox></FBox>
-                </GBox>
-                <GBox>
-                  <h6>Aggregation</h6>
-                  <Form>
-                    <div>
-                      <input type="radio" value="None" /> <label>None</label>
-                      <br />
-                      <input type="radio" value="Max" /> <label>Max</label>
-                      <br />
-                      <input type="radio" value="Mean" /> <label>Mean</label>
+                    <h5>Period</h5>
+                    <div
+                      style={{
+                        marginTop: "5px",
+                        border: "1px solid #AAAAAA",
+                      }}
+                    >
+                      <Input type="date"></Input>~<Input type="date"></Input>
                     </div>
-                    <div>
-                      <input type="radio" value="Min" /> <label>Min</label>
-                      <br />
-                      <input type="radio" value="Sum" /> <label>Sum</label>
-                      <br />
-                      <input type="radio" value="Count" /> <label>Count</label>
-                    </div>
-                  </Form>
-                </GBox>
-              </Flex>
-            </InfoBox>
-          </DInfo>
-        </Flex>
-        <BlueButton>Apply</BlueButton>
+                  </div>
+                </Flex>
+              </InfoBox>
+            </Info>
+            <DInfo>
+              <InfoBox>
+                <Flex>
+                  <h5>Group by</h5>
+                  <Tab>
+                    <Tabitem
+                      style={{
+                        paddingRight: "12px",
+                      }}
+                    >
+                      frj 1
+                    </Tabitem>
+                    <Tabitem2>
+                      <TabitemBar2>frj 2</TabitemBar2>
+                    </Tabitem2>
+                    <Tabitem2>
+                      <TabitemBar2>frj 3</TabitemBar2>
+                    </Tabitem2>
+                  </Tab>
+                </Flex>
+                <Flex>
+                  <div
+                    style={{
+                      width: "80px",
+                    }}
+                  ></div>
+                  <GBox>
+                    <h6>Feature List</h6>
+                    <FBox></FBox>
+                    <Search
+                      type="text"
+                      id="Search"
+                      name="Search"
+                      placeholder="Search"
+                    />
+                  </GBox>
+                  <GBox>
+                    <h6>Selected Feature</h6>
+                    <FBox></FBox>
+                  </GBox>
+                  <GBox>
+                    <h6>Aggregation</h6>
+                    <Form>
+                      <div>
+                        <input type="radio" value="None" /> <label>None</label>
+                        <br />
+                        <input type="radio" value="Max" /> <label>Max</label>
+                        <br />
+                        <input type="radio" value="Mean" /> <label>Mean</label>
+                      </div>
+                      <div>
+                        <input type="radio" value="Min" /> <label>Min</label>
+                        <br />
+                        <input type="radio" value="Sum" /> <label>Sum</label>
+                        <br />
+                        <input type="radio" value="Count" /> 
+                        <label>Count</label>
+                      </div>
+                    </Form>
+                  </GBox>
+                </Flex>
+              </InfoBox>
+            </DInfo>
+          </Flex>
+        )}
+        {visible && <BlueButton>Apply</BlueButton>}
       </Container>
     </>
   );
@@ -291,9 +301,9 @@ const Container = styled.div`
 
 const Title = styled.div`
   background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
   position: relative;
   width: 50%;
+  cursor: pointer;
   h3 {
     margin: 0px;
     font-size: 1.125rem;
@@ -310,9 +320,10 @@ const Title = styled.div`
 `;
 const DTitle = styled.div`
   background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
   position: relative;
   width: 50%;
+  cursor: pointer;
+
   h3 {
     margin: 0px;
     font-size: 1.125rem;
