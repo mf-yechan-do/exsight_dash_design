@@ -71,8 +71,10 @@ export default function SideBar() {
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <span style={{ paddingLeft: "13px" }}>Analysis</span>
+                <Link href="/analysis">
+                  <a>
+                    <span style={{ paddingLeft: "13px" }}>Analysis</span>
+                  </a>
                 </Link>
               </li>
               <li>
