@@ -3,78 +3,36 @@ import { types, applySnapshot, Instance } from "mobx-state-tree";
 
 let store;
 
-const Content = types.model({
-  id: types.number,
-  name: types.string,
-  desc: types.string
-
-})
-const Welcome = types.model({
-  title: types.string,
-  sub: types.string
-
-})
-const Subject = types.model({
-  title: types.string,
-  sub: types.string
-
-})
 const Store = types
   .model({
-    count: types.number,
-    mode: types.string,
-    right: types.string,
-    title: types.string,
-    name: types.string,
-    desc: types.string,
-    subject: types.array(Subject),
-    welcome: types.array(Welcome),
-    content: types.array(Content),
-    content_id: types.number
+    datatype: types.string,
+    sidebar: types.string,
+    mode: types.string
   })
   .actions((self) => {
-    function plus() {
-      self.count++;
-      console.log("count++");
-    }
+    
 
-    function del() {
-      self.count--
-      console.log("count--");
-    }
-
-    const onChangeMode = (_mode: string) => {
+    const onChangeSidebar = (_sidebar: string) => {
+      self.sidebar = _sidebar;
+    };
+    const ChangeMode = (_mode: string) => {
       self.mode = _mode;
     };
-    const Content_id = (_id: number) => {
-      self.content_id = _id;
+    const DataType = (_datatype: string) => {
+      self.datatype = _datatype;
     };
   
 
-    return { plus, del, onChangeMode, Content_id};
+    return { onChangeSidebar,ChangeMode, DataType};
   });
 
   export type IStore = Instance<typeof Store>
   
 export function initializeStore(snapshot = null) {
   const _store = store ?? Store.create({
-    count: 0,
-    content_id: 0,
-    mode: "25px",
-    right: "25px",
-      title: "mofl",
-      name: "reswr",
-      desc: "desc",
-      subject:[
-        {title:"WEB", sub:"World Wide Web!"}
-      ],
-      welcome: [{title:"Welcome", sub:"Hello, React!!"}],
-      content: [
-        {id:0, name:"HTML", desc:"HyperText Markup Language"},
-        {id:1, name:"CSS", desc:"Cascading Style Sheets"},
-        {id:2, name:"JavaScript", desc:"객체(object) 기반의 스크립트 언어입니다"}
-      ]
-      
+    datatype: "",
+    mode: "home",
+    sidebar: "open",
     });
 
   // If your page has Next.js data fetching methods that use a Mobx store, it will

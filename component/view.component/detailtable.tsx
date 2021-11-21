@@ -22,6 +22,20 @@ const Title = styled.div`
     top: 15px;
   }
 `;
+function Align() {
+  return (
+    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
+      <g transform="translate(-476 -193)">
+        <path
+          d="M5,0l5,4H0Z"
+          transform="translate(486 206) rotate(180)"
+          fill="#707070"
+        />
+        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#707070" />
+      </g>
+    </svg>
+  );
+}
 export default function DetailTable() {
   const [visible, setVisible] = React.useState(false);
   return (
@@ -43,121 +57,58 @@ export default function DetailTable() {
                   }}
                 >
                   <th>
-                    Dynamic Data
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Dynamic Data </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Static Data
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Static Data </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Status
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Status </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Join Feature
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue">Join Feature</span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Time Period
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Time Period </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Aggregation
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Aggregation</span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Group by Feature
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Group by Feature </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Aggregation
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Aggregation </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th>
-                    Version History
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <DThbar>
+                      <span className="blue"> Version History </span>
+                      <Align />
+                    </DThbar>
                   </th>
                   <th></th>
                 </tr>

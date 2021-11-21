@@ -19,7 +19,244 @@ export default function Settings() {
               <Flex>
                 <GBox>
                   <h6>Feature List</h6>
-                  <FBox></FBox>
+                  <FBox>
+                    <form>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                    </form>
+                  </FBox>
                   <Search
                     type="text"
                     id="Search"
@@ -29,7 +266,74 @@ export default function Settings() {
                 </GBox>
                 <GBox>
                   <h6>Selected Feature</h6>
-                  <FBox></FBox>
+                  <FBox>
+                    <div
+                      style={{
+                        fontSize: "0.625rem",
+                        color: "#222222",
+                        background: "#dddddddd",
+                        padding: "5px 10px",
+                        display: "inline-block",
+                        margin: "5px 0px 0px 5px",
+                      }}
+                    >
+                      Feature
+                      <div
+                        style={{
+                          display: "inline-block",
+                          width: "1px",
+                          background: "#222222",
+                          height: "8px",
+                          margin: "0px 5px 0px 10px",
+                        }}
+                      ></div>
+                      <span style={{ cursor: "pointer" }}>X</span>
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "0.625rem",
+                        color: "#222222",
+                        background: "#dddddddd",
+                        padding: "5px 10px",
+                        display: "inline-block",
+                        margin: "5px 0px 0px 5px",
+                      }}
+                    >
+                      T
+                      <div
+                        style={{
+                          display: "inline-block",
+                          width: "1px",
+                          background: "#222222",
+                          height: "8px",
+                          margin: "0px 5px 0px 10px",
+                        }}
+                      ></div>
+                      <span style={{ cursor: "pointer" }}>X</span>
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "0.625rem",
+                        color: "#222222",
+                        background: "#dddddddd",
+                        padding: "5px 10px",
+                        display: "inline-block",
+                        margin: "5px 0px 0px 5px",
+                      }}
+                    >
+                      Feature
+                      <div
+                        style={{
+                          display: "inline-block",
+                          width: "1px",
+                          background: "#222222",
+                          height: "8px",
+                          margin: "0px 5px 0px 10px",
+                        }}
+                      ></div>
+                      <span style={{ cursor: "pointer" }}>X</span>
+                    </div>
+                  </FBox>
                 </GBox>
               </Flex>
             </InfoBox>
@@ -38,7 +342,244 @@ export default function Settings() {
               <Flex>
                 <GBox>
                   <h6>Feature List</h6>
-                  <FBox></FBox>
+                  <FBox>
+                    <form>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.625rem",
+                          height: "20px",
+
+                          borderBottom: "1px solid #dddddd",
+                          color: "#707070",
+                        }}
+                      >
+                        <Flex>
+                          <input
+                            type="radio"
+                            style={{
+                              marginRight: "8px",
+                            }}
+                          />
+                           
+                          <label
+                            style={{
+                              paddingTop: "2px",
+                            }}
+                          >
+                            Feature
+                          </label>
+                        </Flex>
+                      </div>
+                    </form>
+                  </FBox>
                   <Search
                     type="text"
                     id="Search"
@@ -48,24 +589,100 @@ export default function Settings() {
                 </GBox>
                 <GBox>
                   <h6>Selected Feature</h6>
-                  <FBox></FBox>
+                  <FBox>
+                    <div
+                      style={{
+                        fontSize: "0.625rem",
+                        color: "#222222",
+                        background: "#dddddddd",
+                        padding: "5px 10px",
+                        display: "inline-block",
+                        margin: "5px 0px 0px 5px",
+                      }}
+                    >
+                      Feature
+                      <div
+                        style={{
+                          display: "inline-block",
+                          width: "1px",
+                          background: "#222222",
+                          height: "8px",
+                          margin: "0px 5px 0px 10px",
+                        }}
+                      ></div>
+                      <span style={{ cursor: "pointer" }}>X</span>
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "0.625rem",
+                        color: "#222222",
+                        background: "#dddddddd",
+                        padding: "5px 10px",
+                        display: "inline-block",
+                        margin: "5px 0px 0px 5px",
+                      }}
+                    >
+                      T
+                      <div
+                        style={{
+                          display: "inline-block",
+                          width: "1px",
+                          background: "#222222",
+                          height: "8px",
+                          margin: "0px 5px 0px 10px",
+                        }}
+                      ></div>
+                      <span style={{ cursor: "pointer" }}>X</span>
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "0.625rem",
+                        color: "#222222",
+                        background: "#dddddddd",
+                        padding: "5px 10px",
+                        display: "inline-block",
+                        margin: "5px 0px 0px 5px",
+                      }}
+                    >
+                      Feature
+                      <div
+                        style={{
+                          display: "inline-block",
+                          width: "1px",
+                          background: "#222222",
+                          height: "8px",
+                          margin: "0px 5px 0px 10px",
+                        }}
+                      ></div>
+                      <span style={{ cursor: "pointer" }}>X</span>
+                    </div>
+                  </FBox>
                 </GBox>
                 <GBox>
                   <h6>Aggregation</h6>
                   <Form>
                     <div>
-                      <input type="radio" value="None" /> <label>None</label>
-                      <br />
-                      <input type="radio" value="Max" /> <label>Max</label>
-                      <br />
-                      <input type="radio" value="Mean" /> <label>Mean</label>
+                      <Flex>
+                        <input type="radio" value="None" /> <label>None</label>
+                      </Flex>
+                      <Flex>
+                        <input type="radio" value="Max" /> <label>Max</label>
+                      </Flex>
+                      <Flex>
+                        <input type="radio" value="Mean" /> <label>Mean</label>
+                      </Flex>
                     </div>
                     <div>
-                      <input type="radio" value="Min" /> <label>Min</label>
-                      <br />
-                      <input type="radio" value="Sum" /> <label>Sum</label>
-                      <br />
-                      <input type="radio" value="Count" /> <label>Count</label>
+                      <Flex>
+                        <input type="radio" value="Min" /> <label>Min</label>
+                      </Flex>
+                      <Flex>
+                        <input type="radio" value="Sum" /> <label>Sum</label>
+                      </Flex>
+                      <Flex>
+                        <input type="radio" value="Count" /> 
+                        <label>Count</label>
+                      </Flex>
                     </div>
                   </Form>
                 </GBox>
@@ -149,7 +766,7 @@ const Search = styled.input`
 `;
 const Form = styled.form`
   min-width: 135px;
-  display: table;
+  display: flex;
   input {
     margin-left: 0px;
   }
@@ -161,10 +778,9 @@ const Form = styled.form`
     padding-bottom: 3px;
   }
   div {
-    display: table-cell;
+    width: 50%;
   }
   div:last-child {
-    padding-left: 20px;
   }
 `;
 const GBox = styled.div`
@@ -180,6 +796,7 @@ const FBox = styled.div`
   border: 1px solid #aaaaaa;
   height: 160px;
   width: 160px;
+  overflow: scroll;
 `;
 const Flex = styled.div`
   display: flex;

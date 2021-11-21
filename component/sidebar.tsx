@@ -17,36 +17,53 @@ class SideBar extends Component<Props> {
     const { store } = this.props;
     unprotect(store);
 
-    const control = () => {
-      if (store.mode === "15px") {
+    const Datasetselect = () => {
+      if (
+        store.mode === "dataset" ||
+        store.mode === "Dynamic" ||
+        store.mode === "Static"
+      ) {
+        const _article = "select";
+        return _article;
+      }
+    };
+    const Analysisselect = () => {
+      if (store.mode === "analysis") {
+        const _article = "select";
+        return _article;
+      }
+    };
+    const width = () => {
+      if (store.sidebar === "closed") {
         const _article = "40px";
         return _article;
-      } else if (store.mode === "25px") {
+      } else if (store.sidebar === "open") {
         const _article = "280px";
         return _article;
       }
     };
-    const control3 = () => {
-      if (store.mode === "15px") {
-        const _article = "-280px";
-        return _article;
-      } else if (store.mode === "25px") {
-        const _article = "0px";
-        return _article;
+    const menuHidden = () => {
+      if (store.sidebar === "closed") {
+        const _barclosed = "barclosed";
+        return _barclosed;
+      } else if (store.sidebar === "open") {
+        const _barclosed = "";
+        return _barclosed;
       }
     };
     const control2 = () => {
-      if (store.mode === "15px") {
+      if (store.sidebar === "closed") {
         const _article = (
           <img
             onClick={(event) => {
-              store.onChangeMode("25px");
+              store.onChangeSidebar("open");
             }}
             style={{
               position: "absolute",
-              top: "15px",
+              top: "25px",
               right: "10px",
               cursor: "pointer",
+              zIndex: 100,
             }}
             src="/images/hamburger.svg"
             alt="mofl logo"
@@ -54,17 +71,18 @@ class SideBar extends Component<Props> {
           />
         );
         return _article;
-      } else if (store.mode === "25px") {
+      } else if (store.sidebar === "open") {
         const _article = (
           <img
             onClick={(event) => {
-              store.onChangeMode("15px");
+              store.onChangeSidebar("closed");
             }}
             style={{
               position: "absolute",
               top: "25px",
               right: "25px",
               cursor: "pointer",
+              zIndex: 100,
             }}
             src="/images/close.svg"
             alt="mofl logo"
@@ -78,20 +96,19 @@ class SideBar extends Component<Props> {
       <>
         <Sidebar
           style={{
-            minWidth: control(),
-            width: control(),
+            minWidth: width(),
+            width: width(),
+            transition: "all 0.5s",
           }}
         >
           <Container>
             {control2()}
-            <Nav
-              style={{
-                marginLeft: control3(),
-              }}
-            >
-              <h2>ExSight Dash</h2>
+            <Nav className={menuHidden()}>
+              <h2>
+                <a href="/home">ExSight Dash</a>
+              </h2>
               <ul>
-                <li>
+                {/*<li>
                   <Link href="#">
                     <a>
                       <img
@@ -126,31 +143,47 @@ class SideBar extends Component<Props> {
                       Exp Group 2
                     </a>
                   </Link>
-                </li>
+                      </li>*/}
                 <li>
-                  <Link href="/dataset">
-                    <a>
-                      <span style={{ paddingLeft: "13px" }}>Dataset</span>
-                    </a>
-                  </Link>
+                  <a
+                    onClick={(event) => {
+                      store.ChangeMode("dataset");
+                    }}
+                  >
+                    <span
+                      className={Datasetselect()}
+                      style={{ paddingLeft: "13px" }}
+                    >
+                      Dataset
+                    </span>
+                  </a>
                 </li>
+                {/*
                 <li>
                   <Link href="#">
                     <span style={{ paddingLeft: "13px" }}>Forecast</span>
                   </Link>
-                </li>
+                </li>*/}
                 <li>
-                  <Link href="/analysis">
-                    <a>
-                      <span style={{ paddingLeft: "13px" }}>Analysis</span>
-                    </a>
-                  </Link>
+                  <a
+                    onClick={(event) => {
+                      store.ChangeMode("analysis");
+                    }}
+                  >
+                    <span
+                      className={Analysisselect()}
+                      style={{ paddingLeft: "13px" }}
+                    >
+                      Analysis
+                    </span>
+                  </a>
                 </li>
+                {/*
                 <li>
                   <Link href="#">
                     <span style={{ paddingLeft: "13px" }}>Experiments</span>
                   </Link>
-                </li>
+                </li>*/}
               </ul>
             </Nav>
           </Container>
@@ -191,6 +224,7 @@ const Sidebar2 = styled.div`
   }
 `;
 const Nav = styled.nav`
+  transition: all 0.5s;
   img {
     margin: 0px 5px 4px 0px;
     cursor: pointer;

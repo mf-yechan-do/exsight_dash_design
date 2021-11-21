@@ -3,6 +3,36 @@ import Link from "next/link";
 import styled from "styled-components";
 import React, { useState } from "react";
 
+function Align() {
+  return (
+    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
+      <g transform="translate(-476 -193)">
+        <path
+          d="M5,0l5,4H0Z"
+          transform="translate(486 206) rotate(180)"
+          fill="#707070"
+        />
+        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#707070" />
+      </g>
+    </svg>
+  );
+}
+
+function WAlign() {
+  return (
+    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
+      <g transform="translate(-476 -193)">
+        <path
+          d="M5,0l5,4H0Z"
+          transform="translate(486 206) rotate(180)"
+          fill="#ffffff"
+        />
+        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#ffffff" />
+      </g>
+    </svg>
+  );
+}
+
 export default function DataSelect() {
   const [visible, setVisible] = React.useState(false);
   return (
@@ -39,108 +69,45 @@ export default function DataSelect() {
                     <tr>
                       <th>
                         <DThbar>
-                          Name
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue"> Name </span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Domain
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Domain</span>
+                          <Align />
                         </DThbar>
                       </th>
 
                       <th>
                         <DThbar>
-                          Created
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Created</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Updated
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Updated
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Updated
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Updated
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th></th>
@@ -179,92 +146,45 @@ export default function DataSelect() {
                     <tr>
                       <th>
                         <DThbar>
-                          Name
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue"> Name </span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Domain
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Domain</span>
+                          <Align />
+                        </DThbar>
+                      </th>
+
+                      <th>
+                        <DThbar>
+                          <span className="blue">Created</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Description
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Data Type
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Created
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          Updated
-                          <img
-                            src="/images/table_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/table_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="blue">Updated</span>
+                          <Align />
                         </DThbar>
                       </th>
                       <th></th>
@@ -304,92 +224,38 @@ export default function DataSelect() {
                     <tr>
                       <th>
                         <Thbar>
-                          Name
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Name</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Domain
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Domain</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Description
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Description</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Data Type
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Data Type</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Created
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Created</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Updated
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Updated</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th></th>
@@ -423,92 +289,38 @@ export default function DataSelect() {
                     <tr>
                       <th>
                         <Thbar>
-                          Name
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Name</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Domain
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Domain</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Description
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Description</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Data Type
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Data Type</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Created
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Created</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          Updated
-                          <img
-                            src="/images/wtable_filter.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
-                          <img
-                            src="/images/wtable_align.svg"
-                            alt="mofl logo"
-                            height={14}
-                          />
+                          <span className="gray">Updated</span>
+                          <WAlign />
                         </Thbar>
                       </th>
                       <th></th>
@@ -593,7 +405,6 @@ const SelectedDatasetTable = styled.table`
   }
   td:first-child {
     padding-left: 15px;
-    color: #254067;
   }
   th:first-child {
     padding-left: 15px;
@@ -662,7 +473,6 @@ const DatasetTable = styled.table`
   }
   td:first-child {
     padding-left: 15px;
-    color: #254067;
   }
   th:first-child {
     padding-left: 15px;

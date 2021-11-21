@@ -1,350 +1,197 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import React, { useState, Component } from "react";
+import { inject, observer } from "mobx-react";
+import { unprotect } from "mobx-state-tree";
+import { IStore } from "../../store";
 
-export default function Table() {
+type Props = {
+  store?: IStore;
+};
+
+function Align() {
   return (
-    <>
-      <Container>
-        <Dataset>
-          <h3>Dataset</h3>
-          <Search type="text" id="Search" name="Search" placeholder="Search" />
-          <BlueButton>Add Data</BlueButton>
-          <TableScroll>
-            <DatasetTable>
-              <tr
-                style={{
-                  position: "sticky",
-                  top: "0px",
-                  backgroundColor: "#f5f5f5",
-                }}
-              >
-                <th>
-                  <DThbar>
-                    Name
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </DThbar>
-                </th>
-                <th>
-                  <DThbar>
-                    Domain
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </DThbar>
-                </th>
-                <th>
-                  <DThbar>
-                    Description
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </DThbar>
-                </th>
-                <th>
-                  <DThbar>
-                    Data Type
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </DThbar>
-                </th>
-                <th>
-                  <DThbar>
-                    Created
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </DThbar>
-                </th>
-                <th>
-                  <DThbar>
-                    Updated
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                  </DThbar>
-                </th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/Dview">Out_stock</a>
-                </td>
-                <td>Prj1</td>
-                <td>출고량</td>
-                <td>Dynamic Real</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="/view">SKU_info</a>
-                </td>
-                <td>Prj1</td>
-                <td>SKU 정보</td>
-                <td>Static</td>
-                <td>2021/01/03</td>
-                <td>2021/01/03</td>
-                <td></td>
-              </tr>
-            </DatasetTable>
-          </TableScroll>
-        </Dataset>
-      </Container>
-    </>
+    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
+      <g transform="translate(-476 -193)">
+        <path
+          d="M5,0l5,4H0Z"
+          transform="translate(486 206) rotate(180)"
+          fill="#707070"
+        />
+        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#707070" />
+      </g>
+    </svg>
   );
 }
+@inject("store")
+@observer
+class Table extends Component<Props> {
+  render() {
+    const { store } = this.props;
+    unprotect(store);
+
+    return (
+      <>
+        <Container>
+          <Dataset>
+            <h3>Dataset</h3>
+            <Search
+              type="text"
+              id="Search"
+              name="Search"
+              placeholder="Search"
+            />
+            <BlueButton>Add Data</BlueButton>
+            <TableScroll>
+              <DatasetTable>
+                <tr
+                  style={{
+                    position: "sticky",
+                    top: "0px",
+                    backgroundColor: "#f5f5f5",
+                  }}
+                >
+                  <th>
+                    <DThbar>
+                      <span className="blue">Name</span>
+                      {/*
+                    <img
+                      src="/images/table_filter.svg"
+                      alt="mofl logo"
+                      height={14}
+                    />*/}
+                      <Align />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      <span className="blue">Domain</span>
+                      <Align />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      <span className="blue">Description</span>
+                      <Align />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      <span className="blue">Data Type</span>
+                      <Align />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      <span className="blue">Created</span>
+                      <Align />
+                    </DThbar>
+                  </th>
+                  <th>
+                    <DThbar>
+                      <span className="blue">Updated</span>
+                      <Align />
+                    </DThbar>
+                  </th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Dynamic");
+                      }}
+                    >
+                      Out_stock
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>출고량</td>
+                  <td>Dynamic Real</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Static");
+                      }}
+                    >
+                      SKU_info
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>SKU 정보</td>
+                  <td>Static</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+              </DatasetTable>
+            </TableScroll>
+          </Dataset>
+          <Pagination>
+            <div>
+              <img
+                style={{
+                  transform: "rotate(90deg)",
+                }}
+                src="/images/big_arrow.svg"
+              />
+              <ul>
+                <li className="pages">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+              </ul>
+              <img
+                style={{
+                  transform: "rotate(-90deg)",
+                }}
+                src="/images/big_arrow.svg"
+              />
+            </div>
+          </Pagination>
+        </Container>
+      </>
+    );
+  }
+}
+export default Table;
+
+const Pagination = styled.div`
+  border-right: 1px solid #dddddd;
+  text-align: center;
+  width: 100%;
+  padding: 20px 40px;
+  ul {
+    list-style: none;
+  }
+  ul,
+  li {
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 0.875rem !important;
+    margin: 0px 10px;
+    color: #707070;
+  }
+`;
 
 const DThbar = styled.div`
   border-right: 1px solid #dddddd;
 `;
 const TableScroll = styled.div`
   overflow: scroll;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 210px);
   border-top: 1px solid #dddddd;
   background: #ffffff;
   min-height: 200px;
@@ -407,6 +254,7 @@ const DatasetTable = styled.table`
     img:first-child {
       margin-left: 8px;
       margin-right: 10px;
+      display: none;
     }
     img:last-child {
       margin-left: 10px;

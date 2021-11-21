@@ -2,6 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
+function Align() {
+  return (
+    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
+      <g transform="translate(-476 -193)">
+        <path
+          d="M5,0l5,4H0Z"
+          transform="translate(486 206) rotate(180)"
+          fill="#707070"
+        />
+        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#707070" />
+      </g>
+    </svg>
+  );
+}
 export default function ViewTable() {
   const rendering = () => {
     const result = [];
@@ -54,77 +68,32 @@ export default function ViewTable() {
               <tr>
                 <th>
                   <DThbar>
-                    Id
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <span className="blue"> ID </span>
+                    <Align />
                   </DThbar>
                 </th>
                 <th>
                   <DThbar>
-                    Goods_code
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <span className="blue"> Goods_code </span>
+                    <Align />
                   </DThbar>
                 </th>
                 <th>
                   <DThbar>
-                    Febric
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <span className="blue"> Febric </span>
+                    <Align />
                   </DThbar>
                 </th>
                 <th>
                   <DThbar>
-                    Color
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <span className="blue"> Color </span>
+                    <Align />
                   </DThbar>
                 </th>
                 <th>
                   <DThbar>
-                    Size
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
-                    <img
-                      src="/images/table_align.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />
+                    <span className="blue"> Size </span>
+                    <Align />
                   </DThbar>
                 </th>
                 <th>
