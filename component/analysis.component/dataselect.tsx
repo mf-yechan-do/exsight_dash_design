@@ -68,6 +68,13 @@ export default function DataSelect() {
                   <DatasetTable>
                     <tr>
                       <th>
+                        <DThbar
+                          style={{
+                            height: "18px",
+                          }}
+                        ></DThbar>
+                      </th>
+                      <th>
                         <DThbar>
                           <span className="blue"> Name </span>
                           <Align />
@@ -113,6 +120,9 @@ export default function DataSelect() {
                       <th></th>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>Out_stock</td>
                       <td>Prj1</td>
                       <td>2021/01/03</td>
@@ -120,6 +130,9 @@ export default function DataSelect() {
                       <td></td>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>SKU_info</td>
                       <td>Prj1</td>
                       <td>2021/01/03</td>
@@ -145,6 +158,13 @@ export default function DataSelect() {
                   <DatasetTable>
                     <tr>
                       <th>
+                        <DThbar
+                          style={{
+                            height: "18px",
+                          }}
+                        ></DThbar>
+                      </th>
+                      <th>
                         <DThbar>
                           <span className="blue"> Name </span>
                           <Align />
@@ -190,6 +210,9 @@ export default function DataSelect() {
                       <th></th>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>Out_stock</td>
                       <td>Prj1</td>
                       <td>출고량</td>
@@ -199,6 +222,9 @@ export default function DataSelect() {
                       <td></td>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>SKU_info</td>
                       <td>Prj1</td>
                       <td>SKU 정보</td>
@@ -223,6 +249,13 @@ export default function DataSelect() {
                   <SelectedDatasetTable>
                     <tr>
                       <th>
+                        <DThbar
+                          style={{
+                            height: "18px",
+                          }}
+                        ></DThbar>
+                      </th>
+                      <th>
                         <Thbar>
                           <span className="gray">Name</span>
                           <WAlign />
@@ -261,6 +294,9 @@ export default function DataSelect() {
                       <th></th>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>Out_stock</td>
                       <td>Prj1</td>
                       <td>출고량</td>
@@ -270,6 +306,9 @@ export default function DataSelect() {
                       <td></td>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>SKU_info</td>
                       <td>Prj1</td>
                       <td>SKU 정보</td>
@@ -288,6 +327,13 @@ export default function DataSelect() {
                   <SelectedDatasetTable>
                     <tr>
                       <th>
+                        <DThbar
+                          style={{
+                            height: "18px",
+                          }}
+                        ></DThbar>
+                      </th>
+                      <th>
                         <Thbar>
                           <span className="gray">Name</span>
                           <WAlign />
@@ -326,6 +372,9 @@ export default function DataSelect() {
                       <th></th>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>Out_stock</td>
                       <td>Prj1</td>
                       <td>출고량</td>
@@ -335,6 +384,9 @@ export default function DataSelect() {
                       <td></td>
                     </tr>
                     <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
                       <td>SKU_info</td>
                       <td>Prj1</td>
                       <td>SKU 정보</td>
@@ -408,6 +460,7 @@ const SelectedDatasetTable = styled.table`
   }
   th:first-child {
     padding-left: 15px;
+    min-width: 50px !important;
   }
 
   th:not(:last-of-type) {
@@ -476,6 +529,7 @@ const DatasetTable = styled.table`
   }
   th:first-child {
     padding-left: 15px;
+    min-width: 50px !important;
   }
 
   th:not(:last-of-type) {

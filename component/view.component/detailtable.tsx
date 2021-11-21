@@ -112,7 +112,7 @@ export default function DetailTable() {
                   </th>
                   <th></th>
                 </tr>
-                <tr>
+                <Tr>
                   <td>Out_stock</td>
                   <td>SKU_info</td>
                   <td>
@@ -125,8 +125,8 @@ export default function DetailTable() {
                   <td>Min</td>
                   <td>September 23, 2021 11:29 AM</td>
                   <td></td>
-                </tr>
-                <tr>
+                </Tr>
+                <Tr>
                   <td>Out_stock</td>
                   <td>SKU_info</td>
                   <td>
@@ -139,8 +139,8 @@ export default function DetailTable() {
                   <td>Min</td>
                   <td>September 23, 2021 11:29 AM</td>
                   <td></td>
-                </tr>
-                <tr>
+                </Tr>
+                <Tr>
                   <td>Out_stock</td>
                   <td>SKU_info</td>
                   <td>
@@ -153,7 +153,7 @@ export default function DetailTable() {
                   <td>Min</td>
                   <td>September 23, 2021 11:29 AM</td>
                   <td></td>
-                </tr>
+                </Tr>
               </DatasetTable>
             </TableScroll>
           )}
@@ -163,6 +163,12 @@ export default function DetailTable() {
   );
 }
 
+const Tr = styled.tr`
+  :hover td {
+    background: #dfe7f5 !important;
+    color: #254067 !important;
+  }
+`;
 const DThbar = styled.div`
   border-right: 1px solid #dddddd;
 `;
@@ -207,7 +213,6 @@ const DatasetTable = styled.table`
   }
   td:first-child {
     padding-left: 15px;
-    color: #254067;
   }
   th:first-child {
     padding-left: 15px;
