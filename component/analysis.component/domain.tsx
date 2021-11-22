@@ -41,16 +41,30 @@ export default function Domain() {
           }}
         >
           <Dataset>
-            <h3>Domain Name:frj 1</h3>
-            <Search
-              type="text"
-              id="Search"
-              name="Search"
-              placeholder="Search"
-            />
+            <div
+              style={{
+                border: "1px solid #dddddd",
+                background: "#f5f5f5",
+              }}
+            >
+              <h3>Domain Name:frj 1</h3>
+              <Search
+                type="text"
+                id="Search"
+                name="Search"
+                placeholder="Search"
+              />
+            </div>
             <TableScroll>
               <DatasetTable>
-                <tr>
+                <tr
+                  style={{
+                    position: "sticky",
+                    top: "0px",
+                    backgroundColor: "#f5f5f5",
+                    zIndex: 100,
+                  }}
+                >
                   <th>
                     <DThbar
                       style={{
@@ -107,18 +121,60 @@ export default function Domain() {
                 </tr>
               </DatasetTable>
             </TableScroll>
+            <Pagination>
+              <div>
+                <img
+                  style={{
+                    transform: "rotate(90deg)",
+                  }}
+                  src="/images/big_arrow.svg"
+                />
+                <ul>
+                  <li className="pages">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                </ul>
+                <img
+                  style={{
+                    transform: "rotate(-90deg)",
+                  }}
+                  src="/images/big_arrow.svg"
+                />
+              </div>
+            </Pagination>
           </Dataset>
           <Dataset>
-            <h3>Domain Name:frj 2</h3>
-            <Search
-              type="text"
-              id="Search"
-              name="Search"
-              placeholder="Search"
-            />
+            <div
+              style={{
+                border: "1px solid #dddddd",
+                background: "#f5f5f5",
+              }}
+            >
+              <h3>Domain Name:frj 2</h3>
+              <Search
+                type="text"
+                id="Search"
+                name="Search"
+                placeholder="Search"
+              />
+            </div>
             <TableScroll>
               <DatasetTable>
-                <tr>
+                <tr
+                  style={{
+                    position: "sticky",
+                    top: "0px",
+                    backgroundColor: "#f5f5f5",
+                    zIndex: 100,
+                  }}
+                >
                   <th>
                     <DThbar
                       style={{
@@ -173,8 +229,196 @@ export default function Domain() {
                   <td>2021/01/03</td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>Out_stock</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" /> 
+                  </td>
+                  <td>SKU_info</td>
+                  <td>Prj1</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
               </DatasetTable>
             </TableScroll>
+            <Pagination>
+              <div>
+                <img
+                  style={{
+                    transform: "rotate(90deg)",
+                  }}
+                  src="/images/big_arrow.svg"
+                />
+                <ul>
+                  <li className="pages">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                </ul>
+                <img
+                  style={{
+                    transform: "rotate(-90deg)",
+                  }}
+                  src="/images/big_arrow.svg"
+                />
+              </div>
+            </Pagination>
           </Dataset>
         </Flex>
       </Container>
@@ -182,6 +426,22 @@ export default function Domain() {
   );
 }
 
+const Pagination = styled.div`
+  text-align: center;
+  width: 100%;
+  padding: 20px 40px;
+  ul {
+    list-style: none;
+  }
+  ul,
+  li {
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 0.875rem !important;
+    margin: 0px 10px;
+    color: #707070;
+  }
+`;
 const DThbar = styled.div`
   border-right: 1px solid #dddddd;
 `;
@@ -212,20 +472,6 @@ const TabitemBar = styled.div`
   border-right: 1px solid #adb7c6;
   padding-right: 15px;
 `;
-const GBox = styled.div`
-  :not(:last-of-type) {
-    margin-right: 10px;
-  }
-  :last-child {
-    height: 208px;
-    overflow: hidden;
-  }
-`;
-const FBox = styled.div`
-  border: 1px solid #aaaaaa;
-  height: 160px;
-  width: 160px;
-`;
 const Flex = styled.div`
   display: flex;
 `;
@@ -236,62 +482,13 @@ const Container = styled.div`
   min-width: 1050px;
 `;
 
-const Title = styled.div`
-  background: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
-  position: relative;
-  h3 {
-    margin: 0px;
-    font-size: 1.125rem;
-    color: #254067;
-    font-weight: 500;
-    padding: 7px 0px 7px 15px;
-    display: inline-block;
-  }
-  img {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-  }
-`;
-const Info = styled.div`
-  background: #ffffff;
-  display: flex;
-  h5 {
-    margin: 0px;
-    font-size: 0.875rem;
-    color: #222222;
-    padding-bottom: 3px;
-    font-weight: 500;
-  }
-  h6 {
-    margin: 0px;
-    font-size: 0.75rem;
-    color: #222222;
-    font-weight: 400;
-    padding-bottom: 3px;
-  }
-  p {
-    margin: 0px;
-    font-size: 0.75rem;
-    color: #222222;
-    font-weight: 400;
-    margin-bottom: 40px;
-  }
-`;
-
-const InfoBox = styled.div`
-  margin: 10px 0px 10px 15px;
-  :not(:last-of-type) {
-    border-right: 1px solid #dddddd;
-  }
-  padding-right: 15px;
-`;
-
 const TableScroll = styled.div`
   overflow-y: scroll;
   height: 400px;
   background: #ffffff;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 `;
 
 const Search = styled.input`
@@ -321,7 +518,7 @@ const DatasetTable = styled.table`
   border-collapse: collapse;
   border-spacing: 0;
 
-  tr {
+  tr:not(:first-of-type) {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     background: #f5f5f5;
@@ -385,57 +582,12 @@ const DatasetTable = styled.table`
   }
 `;
 
-const WButton = styled.button`
-  position: absolute;
-  margin: 7px 15px 0px 0px;
-  right: 0px;
-  cursor: pointer;
-  font-size: 0.75rem;
-  color: #254067;
-  background-color: #ffff;
-  border: 1px solid #254067;
-  padding: 2px 20px 5px 20px;
-`;
-
-const BlueButton = styled.button`
-  position: absolute;
-  margin: 7px 15px 0px 0px;
-  right: 0px;
-  cursor: pointer;
-  font-size: 0.75rem;
-  color: #ffff;
-  background-color: #254067;
-  border: 1px solid #254067;
-  padding: 2px 20px 5px 20px;
-`;
-
-const SelectedDataset = styled.div`
-  position: relative;
-  margin: 00px 5px 10px 10px;
-  :last-of-type {
-    margin: 00px 10px 10px 5px;
-  }
-  background: #254067;
-  border: 1px solid #dddddd;
-  opacity: 1;
-  width: 50%;
-  h3 {
-    margin: 0px;
-    font-size: 1.125rem;
-    color: #ffffff;
-    font-weight: 500;
-    padding: 7px 0px 7px 15px;
-    display: inline-block;
-  }
-`;
 const Dataset = styled.div`
   position: relative;
   margin: 0px 5px 0px 0px;
   :last-of-type {
     margin: 0px 0px 0px 5px;
   }
-  background: #f5f5f5;
-  border: 1px solid #dddddd;
   opacity: 1;
   width: 50%;
   h3 {

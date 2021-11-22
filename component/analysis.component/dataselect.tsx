@@ -56,17 +56,30 @@ export default function DataSelect() {
               }}
             >
               <Dataset>
-                <h3>Dynamic Data List</h3>
-                <Search
-                  type="text"
-                  id="Search"
-                  name="Search"
-                  placeholder="Search"
-                />
-                <BlueButton>Add</BlueButton>
+                <div
+                  style={{
+                    borderBottom: "1px solid #dddddd",
+                  }}
+                >
+                  <h3>Dynamic Data List</h3>
+                  <Search
+                    type="text"
+                    id="Search"
+                    name="Search"
+                    placeholder="Search"
+                  />
+                  <BlueButton>Add</BlueButton>
+                </div>
                 <TableScroll>
                   <DatasetTable>
-                    <tr>
+                    <tr
+                      style={{
+                        position: "sticky",
+                        top: "0px",
+                        backgroundColor: "#f5f5f5",
+                        zIndex: 100,
+                      }}
+                    >
                       <th>
                         <DThbar
                           style={{
@@ -142,21 +155,103 @@ export default function DataSelect() {
                       <td>2021/01/03</td>
                       <td></td>
                     </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
                   </DatasetTable>
                 </TableScroll>
               </Dataset>
               <Dataset>
-                <h3>Prediction List</h3>
-                <Search
-                  type="text"
-                  id="Search"
-                  name="Search"
-                  placeholder="Search"
-                />
-                <BlueButton>Add</BlueButton>
+                <div
+                  style={{
+                    borderBottom: "1px solid #dddddd",
+                  }}
+                >
+                  <h3>Prediction List</h3>
+                  <Search
+                    type="text"
+                    id="Search"
+                    name="Search"
+                    placeholder="Search"
+                  />
+                  <BlueButton>Add</BlueButton>
+                </div>
                 <TableScroll>
                   <DatasetTable>
-                    <tr>
+                    <tr
+                      style={{
+                        position: "sticky",
+                        top: "0px",
+                        backgroundColor: "#f5f5f5",
+                        zIndex: 100,
+                      }}
+                    >
                       <th>
                         <DThbar
                           style={{
@@ -243,11 +338,24 @@ export default function DataSelect() {
               }}
             >
               <SelectedDataset>
-                <h3>Selected Dynamic Data</h3>
-                <WButton>Remove</WButton>
+                <div
+                  style={{
+                    borderBottom: "1px solid rgb(173 183 198)",
+                  }}
+                >
+                  <h3>Selected Dynamic Data</h3>
+                  <WButton>Remove</WButton>{" "}
+                </div>
                 <BlueTableScroll>
                   <SelectedDatasetTable>
-                    <tr>
+                    <tr
+                      style={{
+                        position: "sticky",
+                        top: "0px",
+                        backgroundColor: "#254067",
+                        zIndex: 100,
+                      }}
+                    >
                       <th>
                         <DThbar
                           style={{
@@ -317,15 +425,172 @@ export default function DataSelect() {
                       <td>2021/01/03</td>
                       <td></td>
                     </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
                   </SelectedDatasetTable>
                 </BlueTableScroll>
               </SelectedDataset>
               <SelectedDataset>
-                <h3>Selected Prediction</h3>
-                <WButton>Remove</WButton>
+                <div
+                  style={{
+                    borderBottom: "1px solid rgb(173 183 198)",
+                  }}
+                >
+                  <h3>Selected Prediction</h3>
+                  <WButton>Remove</WButton>
+                </div>
                 <BlueTableScroll>
                   <SelectedDatasetTable>
-                    <tr>
+                    <tr
+                      style={{
+                        position: "sticky",
+                        top: "0px",
+                        backgroundColor: "#254067",
+                        zIndex: 100,
+                      }}
+                    >
                       <th>
                         <DThbar
                           style={{
@@ -370,6 +635,150 @@ export default function DataSelect() {
                         </Thbar>
                       </th>
                       <th></th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>Out_stock</td>
+                      <td>Prj1</td>
+                      <td>출고량</td>
+                      <td>Dynamic Real</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox" /> 
+                      </td>
+                      <td>SKU_info</td>
+                      <td>Prj1</td>
+                      <td>SKU 정보</td>
+                      <td>Static</td>
+                      <td>2021/01/03</td>
+                      <td>2021/01/03</td>
+                      <td></td>
                     </tr>
                     <tr>
                       <td>
@@ -450,7 +859,7 @@ const SelectedDatasetTable = styled.table`
   border-collapse: collapse;
   border-spacing: 0;
 
-  tr {
+  tr:not(:first-of-type) {
     border-top: 1px solid rgb(173 183 198);
     border-bottom: 1px solid #dddddd;
     background: #254067;
@@ -519,7 +928,7 @@ const DatasetTable = styled.table`
   border-collapse: collapse;
   border-spacing: 0;
 
-  tr {
+  tr:not(:first-of-type) {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     background: #f5f5f5;

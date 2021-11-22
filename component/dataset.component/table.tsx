@@ -130,6 +130,142 @@ class Table extends Component<Props> {
                   <td>2021/01/03</td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Dynamic");
+                      }}
+                    >
+                      Out_stock
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>출고량</td>
+                  <td>Dynamic Real</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Static");
+                      }}
+                    >
+                      SKU_info
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>SKU 정보</td>
+                  <td>Static</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Dynamic");
+                      }}
+                    >
+                      Out_stock
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>출고량</td>
+                  <td>Dynamic Real</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Static");
+                      }}
+                    >
+                      SKU_info
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>SKU 정보</td>
+                  <td>Static</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Dynamic");
+                      }}
+                    >
+                      Out_stock
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>출고량</td>
+                  <td>Dynamic Real</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Static");
+                      }}
+                    >
+                      SKU_info
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>SKU 정보</td>
+                  <td>Static</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Dynamic");
+                      }}
+                    >
+                      Out_stock
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>출고량</td>
+                  <td>Dynamic Real</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      onClick={(event) => {
+                        store.ChangeMode("Static");
+                      }}
+                    >
+                      SKU_info
+                    </a>
+                  </td>
+                  <td>Prj1</td>
+                  <td>SKU 정보</td>
+                  <td>Static</td>
+                  <td>2021/01/03</td>
+                  <td>2021/01/03</td>
+                  <td></td>
+                </tr>
               </DatasetTable>
             </TableScroll>
           </Dataset>
@@ -169,7 +305,6 @@ class Table extends Component<Props> {
 export default Table;
 
 const Pagination = styled.div`
-  border-right: 1px solid #dddddd;
   text-align: center;
   width: 100%;
   padding: 20px 40px;

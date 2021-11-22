@@ -154,6 +154,90 @@ export default function DetailTable() {
                   <td>September 23, 2021 11:29 AM</td>
                   <td></td>
                 </Tr>
+                <Tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </Tr>
+                <Tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </Tr>
+                <Tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </Tr>
+                <Tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </Tr>
+                <Tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </Tr>
+                <Tr>
+                  <td>Out_stock</td>
+                  <td>SKU_info</td>
+                  <td>
+                    <span style={{ color: "#1D8102" }}>Active</span>
+                  </td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>2 Year</td>
+                  <td>Min</td>
+                  <td>Feature 1, Feature 2</td>
+                  <td>Min</td>
+                  <td>September 23, 2021 11:29 AM</td>
+                  <td></td>
+                </Tr>
               </DatasetTable>
             </TableScroll>
           )}

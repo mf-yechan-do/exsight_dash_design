@@ -23,7 +23,14 @@ export default function ViewTable() {
         <Dataset>
           <TableScroll>
             <DatasetTable>
-              <tr>
+              <tr
+                style={{
+                  position: "sticky",
+                  top: "0px",
+                  backgroundColor: "rgb(245, 245, 245)",
+                  zIndex: 100,
+                }}
+              >
                 <th>
                   <DThbar>
                     <span className="blue"> ID </span>
@@ -96,13 +103,138 @@ export default function ViewTable() {
                 <td>225</td>
                 <td></td>
               </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <a>19297</a>
+                </td>
+                <td>PPFbT1c005</td>
+                <td>-</td>
+                <td>Black</td>
+                <td>225</td>
+                <td></td>
+              </tr>
             </DatasetTable>
           </TableScroll>
         </Dataset>
+        <Pagination>
+          <div>
+            <img
+              style={{
+                transform: "rotate(90deg)",
+              }}
+              src="/images/big_arrow.svg"
+            />
+            <ul>
+              <li className="pages">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+            </ul>
+            <img
+              style={{
+                transform: "rotate(-90deg)",
+              }}
+              src="/images/big_arrow.svg"
+            />
+          </div>
+        </Pagination>
       </Container>
     </>
   );
 }
+
+const Pagination = styled.div`
+  text-align: center;
+  width: 100%;
+  padding: 20px 40px;
+  ul {
+    list-style: none;
+  }
+  ul,
+  li {
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 0.875rem !important;
+    margin: 0px 10px;
+    color: #707070;
+  }
+`;
 
 const DThbar = styled.div`
   border-right: 1px solid #dddddd;
