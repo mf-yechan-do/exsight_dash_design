@@ -75,20 +75,6 @@ body {
   font-family: 'Lato', sans-serif;
   background: #F2F2F2 0% 0% no-repeat padding-box;
 }
-h1 {
-}
-h2 {
-}
-h3 {
-}
-h4 {
-}
-h5 {
-}
-h6 {
-}
-p {
-}
 a {
   color: inherit;
   text-decoration: none;
@@ -106,18 +92,31 @@ ul, li {
       color: #254067;
       cursor: pointer;}
 
-      .gray {
-        color: #dddddd;
-        cursor: pointer;}
+.gray {
+  color: #dddddd;
+  cursor: pointer;
+}
 
-        .tableAlign{
-          margin-bottom: -2px;
-          margin-left: 10px;
-          margin-right: 8px;
-          right: 0px;
-          position: absolute;
-          top: 13px;
-           path {
+.tableAlign{
+  margin-bottom: -2px;
+  margin-left: 10px;
+  margin-right: 8px;
+  right: 0px;
+  position: absolute;
+  top: 13px;
+   path {
     cursor: pointer;
-}}
+   }
+ }
+ .tableAlign2{
+   margin-bottom: -2px;
+   margin-left: 10px;
+   margin-right: 8px;
+   right: 0px;
+   position: absolute;
+   top: 18px;
+    path {
+     cursor: pointer;
+    }
+  }
 `;
