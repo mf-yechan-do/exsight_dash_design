@@ -6,7 +6,7 @@ import React, { useState, Component } from "react";
 import { inject, observer } from "mobx-react";
 import { unprotect } from "mobx-state-tree";
 import { IStore } from "../store";
-import Table from "../component/dataset.component/table";
+import Table from "../component/dataset.component/table_v2";
 import DataSelect from "../component/analysis.component/dataselect";
 import Domain from "../component/analysis.component/domain";
 import GSettings from "../component/analysis.component/gsettings";

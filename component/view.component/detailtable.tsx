@@ -58,55 +58,55 @@ export default function DetailTable() {
                 >
                   <th>
                     <DThbar>
-                      <span className="blue"> Dynamic Data </span>
+                      Dynamic Data
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Static Data </span>
+                      Static Data
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Status </span>
+                      Status
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue">Join Feature</span>
+                      Join Feature
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Time Period </span>
+                      Time Period
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Aggregation</span>
+                      Aggregation
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Group by Feature </span>
+                      Group by Feature
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Aggregation </span>
+                      Aggregation
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue"> Version History </span>
+                      Version History
                       <Align />
                     </DThbar>
                   </th>

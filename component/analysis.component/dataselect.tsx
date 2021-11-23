@@ -5,29 +5,26 @@ import React, { useState } from "react";
 
 function Align() {
   return (
-    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
-      <g transform="translate(-476 -193)">
+    <svg className="tableAlign2" width="10" height="4" viewBox="0 0 10 4">
+      <g transform="translate(-476 -202)">
         <path
           d="M5,0l5,4H0Z"
           transform="translate(486 206) rotate(180)"
           fill="#707070"
         />
-        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#707070" />
       </g>
     </svg>
   );
 }
-
 function WAlign() {
   return (
-    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
-      <g transform="translate(-476 -193)">
+    <svg className="tableAlign2" width="10" height="4" viewBox="0 0 10 4">
+      <g transform="translate(-476 -202)">
         <path
           d="M5,0l5,4H0Z"
           transform="translate(486 206) rotate(180)"
           fill="#ffffff"
         />
-        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#ffffff" />
       </g>
     </svg>
   );
@@ -58,7 +55,47 @@ export default function DataSelect() {
               <Dataset>
                 <div
                   style={{
-                    borderBottom: "1px solid #dddddd",
+                    width: "100%",
+                    padding: "3px 0px 10px 0px",
+                  }}
+                >
+                  <Flex>
+                    <Sort>
+                      <p>Sort</p>
+                      <div className="box">
+                        <div>
+                          Name(Asc)
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Sort>
+                    <div
+                      style={{
+                        width: "15px",
+                      }}
+                    ></div>
+                    <Filter>
+                      <p>Filter</p>
+                      <div className="box">
+                        <div>
+                          <span className="blue">Name</span> contains
+                          <span className="blue"> info</span>
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Filter>
+                  </Flex>
+                </div>
+                <div
+                  style={{
+                    border: "1px solid #dddddd",
+                    background: "#f5f5f5",
                   }}
                 >
                   <h3>Dynamic Data List</h3>
@@ -89,44 +126,44 @@ export default function DataSelect() {
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue"> Name </span>
+                          Name
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Domain</span>
+                          Domain
                           <Align />
                         </DThbar>
                       </th>
 
                       <th>
                         <DThbar>
-                          <span className="blue">Created</span>
+                          Created
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
@@ -230,7 +267,47 @@ export default function DataSelect() {
               <Dataset>
                 <div
                   style={{
-                    borderBottom: "1px solid #dddddd",
+                    width: "100%",
+                    padding: "3px 0px 10px 0px",
+                  }}
+                >
+                  <Flex>
+                    <Sort>
+                      <p>Sort</p>
+                      <div className="box">
+                        <div>
+                          Name(Asc)
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Sort>
+                    <div
+                      style={{
+                        width: "15px",
+                      }}
+                    ></div>
+                    <Filter>
+                      <p>Filter</p>
+                      <div className="box">
+                        <div>
+                          <span className="blue">Name</span> contains
+                          <span className="blue"> info</span>
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Filter>
+                  </Flex>
+                </div>
+                <div
+                  style={{
+                    border: "1px solid #dddddd",
+                    background: "#f5f5f5",
                   }}
                 >
                   <h3>Prediction List</h3>
@@ -261,44 +338,44 @@ export default function DataSelect() {
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue"> Name </span>
+                          Name
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Domain</span>
+                          Domain
                           <Align />
                         </DThbar>
                       </th>
 
                       <th>
                         <DThbar>
-                          <span className="blue">Created</span>
+                          Created
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
                       <th>
                         <DThbar>
-                          <span className="blue">Updated</span>
+                          Updated
                           <Align />
                         </DThbar>
                       </th>
@@ -340,7 +417,47 @@ export default function DataSelect() {
               <SelectedDataset>
                 <div
                   style={{
-                    borderBottom: "1px solid rgb(173 183 198)",
+                    width: "100%",
+                    padding: "10px 0px 10px 0px",
+                  }}
+                >
+                  <Flex>
+                    <Sort>
+                      <p>Sort</p>
+                      <div className="box">
+                        <div>
+                          Name(Asc)
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Sort>
+                    <div
+                      style={{
+                        width: "15px",
+                      }}
+                    ></div>
+                    <Filter>
+                      <p>Filter</p>
+                      <div className="box">
+                        <div>
+                          <span className="blue">Name</span> contains
+                          <span className="blue"> info</span>
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Filter>
+                  </Flex>
+                </div>
+                <div
+                  style={{
+                    border: "1px solid rgb(173 183 198)",
+                    background: "#254067",
                   }}
                 >
                   <h3>Selected Dynamic Data</h3>
@@ -365,37 +482,37 @@ export default function DataSelect() {
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Name</span>
+                          Name
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Domain</span>
+                          Domain
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Description</span>
+                          Description
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Data Type</span>
+                          Data Type
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Created</span>
+                          Created
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Updated</span>
+                          Updated
                           <WAlign />
                         </Thbar>
                       </th>
@@ -575,7 +692,47 @@ export default function DataSelect() {
               <SelectedDataset>
                 <div
                   style={{
-                    borderBottom: "1px solid rgb(173 183 198)",
+                    width: "100%",
+                    padding: "10px 0px 10px 0px",
+                  }}
+                >
+                  <Flex>
+                    <Sort>
+                      <p>Sort</p>
+                      <div className="box">
+                        <div>
+                          Name(Asc)
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Sort>
+                    <div
+                      style={{
+                        width: "15px",
+                      }}
+                    ></div>
+                    <Filter>
+                      <p>Filter</p>
+                      <div className="box">
+                        <div>
+                          <span className="blue">Name</span> contains
+                          <span className="blue"> info</span>
+                          <img
+                            style={{ cursor: "pointer", marginLeft: "10px" }}
+                            src="/images/close.svg"
+                          />
+                        </div>
+                      </div>
+                    </Filter>
+                  </Flex>
+                </div>
+                <div
+                  style={{
+                    border: "1px solid rgb(173 183 198)",
+                    background: "#254067",
                   }}
                 >
                   <h3>Selected Prediction</h3>
@@ -600,37 +757,37 @@ export default function DataSelect() {
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Name</span>
+                          Name
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Domain</span>
+                          Domain
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Description</span>
+                          Description
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Data Type</span>
+                          Data Type
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Created</span>
+                          Created
                           <WAlign />
                         </Thbar>
                       </th>
                       <th>
                         <Thbar>
-                          <span className="gray">Updated</span>
+                          Updated
                           <WAlign />
                         </Thbar>
                       </th>
@@ -815,6 +972,61 @@ export default function DataSelect() {
   );
 }
 
+const Sort = styled.div`
+  p {
+    margin: 0px;
+    color: #254067;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .box {
+    color: #254067;
+    font-size: 0.75rem;
+    background: #f5f5f5 0% 0% no-repeat padding-box;
+    border: 1px solid #dddddd;
+    padding: 5px 15px;
+    margin-top: 5px;
+    img {
+      width: 10px;
+    }
+  }
+`;
+const Filter = styled.div`
+  p {
+    margin: 0px;
+    color: #254067;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .box {
+    color: #707070;
+    font-size: 0.75rem;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    padding: 5px 15px;
+    margin-top: 5px;
+    img {
+      width: 10px;
+    }
+`;
+const Pagination = styled.div`
+  text-align: center;
+  width: 100%;
+  padding: 20px 40px;
+  ul {
+    list-style: none;
+  }
+  ul,
+  li {
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 0.875rem !important;
+    margin: 0px 10px;
+    color: #707070;
+  }
+`;
 const Thbar = styled.div`
   border-right: 1px solid rgb(173 183 198);
 `;
@@ -823,13 +1035,19 @@ const DThbar = styled.div`
 `;
 const TableScroll = styled.div`
   overflow: scroll;
-  height: 200px;
+  height: 250px;
   background: #ffffff;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 `;
 const BlueTableScroll = styled.div`
   overflow: scroll;
-  height: 200px;
+  height: 250px;
   background: #ffffff;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 `;
 
 const Search = styled.input`
@@ -880,7 +1098,7 @@ const SelectedDatasetTable = styled.table`
     text-align: left;
     color: #ffffff;
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
     padding: 10px 0px 10px 8px;
     img {
@@ -1021,8 +1239,6 @@ const SelectedDataset = styled.div`
   :last-of-type {
     margin: 00px 10px 10px 5px;
   }
-  background: #254067;
-  border: 1px solid #dddddd;
   opacity: 1;
   width: calc(50% - 15px);
   h3 {
@@ -1040,8 +1256,6 @@ const Dataset = styled.div`
   :last-of-type {
     margin: 10px 10px 10px 5px;
   }
-  background: #f5f5f5;
-  border: 1px solid #dddddd;
   opacity: 1;
   width: calc(50% - 15px);
   h3 {
