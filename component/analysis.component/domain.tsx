@@ -128,26 +128,26 @@ export default class Domain extends Component<Props> {
                     </th>
                     <th>
                       <DThbar>
-                        <span className="blue"> Name </span>
+                        Name
                         <Align />
                       </DThbar>
                     </th>
                     <th>
                       <DThbar>
-                        <span className="blue">Domain</span>
+                        Domain
                         <Align />
                       </DThbar>
                     </th>
 
                     <th>
                       <DThbar>
-                        <span className="blue">Created</span>
+                        Created
                         <Align />
                       </DThbar>
                     </th>
                     <th>
                       <DThbar>
-                        <span className="blue">Updated</span>
+                        Updated
                         <Align />
                       </DThbar>
                     </th>
@@ -277,26 +277,26 @@ export default class Domain extends Component<Props> {
                     </th>
                     <th>
                       <DThbar>
-                        <span className="blue"> Name </span>
+                        Name
                         <Align />
                       </DThbar>
                     </th>
                     <th>
                       <DThbar>
-                        <span className="blue">Domain</span>
+                        Domain
                         <Align />
                       </DThbar>
                     </th>
 
                     <th>
                       <DThbar>
-                        <span className="blue">Created</span>
+                        Created
                         <Align />
                       </DThbar>
                     </th>
                     <th>
                       <DThbar>
-                        <span className="blue">Updated</span>
+                        Updated
                         <Align />
                       </DThbar>
                     </th>
