@@ -3,12 +3,17 @@ import { types, applySnapshot, Instance } from "mobx-state-tree";
 
 let store;
 
+const FilterId = types.model({
+  name: types.string,
+  id : types.boolean,
+});
+
 const Store = types
   .model({
     datatype: types.string,
-    sidebar: types.string,
-    mode: types.string,
-    isToggleOn: types.boolean,
+    sidebar: types.boolean,
+    menu: types.number,
+    filter: types.array(FilterId),
     isToggleOn2: types.boolean,
     isToggleOn3: types.boolean,
     isToggleOn4: types.boolean,
@@ -18,17 +23,17 @@ const Store = types
   .actions((self) => {
     
 
-    const onChangeSidebar = (_sidebar: string) => {
+    const onChangeSidebar = (_sidebar: boolean) => {
       self.sidebar = _sidebar;
     };
-    const ChangeMode = (_mode: string) => {
-      self.mode = _mode;
+    const Changemenu = (_menu: number) => {
+      self.menu = _menu;
     };
     const DataType = (_datatype: string) => {
       self.datatype = _datatype;
     };
-    const Toggle = (_isToggleOn: boolean) => {
-      self.isToggleOn = _isToggleOn;
+    const setIdFilterBox = (_filterId: boolean) => {
+      self.filter[0].id = (_filterId);
     };
     const Toggle2 = (_isToggleOn: boolean) => {
       self.isToggleOn2 = _isToggleOn;
@@ -47,7 +52,7 @@ const Store = types
     };
   
 
-    return { onChangeSidebar,ChangeMode, DataType, Toggle,Toggle2,Toggle3,Toggle4,Toggle5,Toggle6};
+    return { onChangeSidebar,Changemenu, DataType, setIdFilterBox,Toggle2,Toggle3,Toggle4,Toggle5,Toggle6};
   });
 
   export type IStore = Instance<typeof Store>
@@ -55,9 +60,9 @@ const Store = types
 export function initializeStore(snapshot = null) {
   const _store = store ?? Store.create({
     datatype: "",
-    mode: "home",
-    sidebar: "open",
-    isToggleOn: true,
+    menu: 0,
+    sidebar: true,
+    filter: [{id:false,name:"name"},{id:false,name:"domain"}],
     isToggleOn2: true,
     isToggleOn3: true,
     isToggleOn4: true,

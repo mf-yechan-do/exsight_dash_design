@@ -5,6 +5,7 @@ import React, { useState, Component } from "react";
 import { inject, observer } from "mobx-react";
 import { unprotect } from "mobx-state-tree";
 import { IStore } from "../../store";
+import FilterSelec from "../common/filterselec";
 
 type Props = {
   store?: IStore;
@@ -12,14 +13,13 @@ type Props = {
 
 function Align() {
   return (
-    <svg className="tableAlign" width="10" height="13" viewBox="0 0 10 13">
-      <g transform="translate(-476 -193)">
+    <svg className="tableAlign2" width="10" height="4" viewBox="0 0 10 4">
+      <g transform="translate(-476 -202)">
         <path
           d="M5,0l5,4H0Z"
           transform="translate(486 206) rotate(180)"
           fill="#707070"
         />
-        <path d="M5,0l5,4H0Z" transform="translate(476 193)" fill="#707070" />
       </g>
     </svg>
   );
@@ -30,10 +30,53 @@ class Table extends Component<Props> {
   render() {
     const { store } = this.props;
     unprotect(store);
-
+    const handleFilter = (filterId: any) => {
+      store.setIdFilterBox(filterId);
+    };
     return (
       <>
         <Container>
+          <div
+            style={{
+              width: "100%",
+              padding: "0px 40px",
+              paddingTop: "20px",
+            }}
+          >
+            <Flex>
+              <Sort>
+                <p>Sort</p>
+                <div className="box">
+                  <div>
+                    Name(Asc)
+                    <img
+                      style={{ cursor: "pointer", marginLeft: "10px" }}
+                      src="/images/close.svg"
+                    />
+                  </div>
+                </div>
+              </Sort>
+              <div
+                style={{
+                  width: "15px",
+                }}
+              ></div>
+              <Filter>
+                <p>Filter</p>
+                <div className="box">
+                  <div>
+                    <span className="blue">Name</span> contains
+                    <span className="blue">info</span>
+                    <img
+                      style={{ cursor: "pointer", marginLeft: "10px" }}
+                      src="/images/close.svg"
+                    />
+                  </div>
+                </div>
+              </Filter>
+            </Flex>
+          </div>
+
           <Dataset>
             <h3>Dataset</h3>
             <Search
@@ -53,58 +96,54 @@ class Table extends Component<Props> {
                   }}
                 >
                   <th>
+                    <DThbar
+                      onClick={(event) => {
+                        handleFilter(!store.filter[0].id);
+                      }}
+                    >
+                      Name
+                      <Align />
+                    </DThbar>
+                    {store.filter[0].id == true ? <FilterSelec /> : ""}
+                  </th>
+                  <th>
                     <DThbar>
-                      <span className="blue">Name</span>
-                      {/*
-                    <img
-                      src="/images/table_filter.svg"
-                      alt="mofl logo"
-                      height={14}
-                    />*/}
+                      Domain
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue">Domain</span>
+                      Description
                       <Align />
                     </DThbar>
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue">Description</span>
+                      Data Type
                       <Align />
                     </DThbar>
+                    {store.isToggleOn4 ? " " : <FilterSelec />}
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue">Data Type</span>
+                      Created
                       <Align />
                     </DThbar>
+                    {store.isToggleOn5 ? " " : <FilterSelec />}
                   </th>
                   <th>
                     <DThbar>
-                      <span className="blue">Created</span>
+                      Updated
                       <Align />
                     </DThbar>
-                  </th>
-                  <th>
-                    <DThbar>
-                      <span className="blue">Updated</span>
-                      <Align />
-                    </DThbar>
+                    {store.isToggleOn6 ? " " : <FilterSelec />}
                   </th>
                   <th></th>
                 </tr>
                 <tr>
                   <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Dynamic");
-                      }}
-                    >
-                      Out_stock
-                    </a>
+                    <a href="/data/dynamic">Out_stock</a>
                   </td>
                   <td>Prj1</td>
                   <td>출고량</td>
@@ -115,149 +154,7 @@ class Table extends Component<Props> {
                 </tr>
                 <tr>
                   <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Static");
-                      }}
-                    >
-                      SKU_info
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Dynamic");
-                      }}
-                    >
-                      Out_stock
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Static");
-                      }}
-                    >
-                      SKU_info
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Dynamic");
-                      }}
-                    >
-                      Out_stock
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Static");
-                      }}
-                    >
-                      SKU_info
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Dynamic");
-                      }}
-                    >
-                      Out_stock
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Static");
-                      }}
-                    >
-                      SKU_info
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>SKU 정보</td>
-                  <td>Static</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Dynamic");
-                      }}
-                    >
-                      Out_stock
-                    </a>
-                  </td>
-                  <td>Prj1</td>
-                  <td>출고량</td>
-                  <td>Dynamic Real</td>
-                  <td>2021/01/03</td>
-                  <td>2021/01/03</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a
-                      onClick={(event) => {
-                        store.ChangeMode("Static");
-                      }}
-                    >
-                      SKU_info
-                    </a>
+                    <a href="/data/static">SKU_info</a>
                   </td>
                   <td>Prj1</td>
                   <td>SKU 정보</td>
@@ -304,6 +201,101 @@ class Table extends Component<Props> {
 }
 export default Table;
 
+const SortBtn = styled.div`
+  .selectbtn {
+    color: #ffffff;
+    background: #254067;
+    svg > path {
+      fill: #ffffff;
+    }
+    line {
+      stroke: #ffffff;
+    }
+  }
+  div {
+    color: #254067;
+    font-size: 0.75rem;
+    border: 1px solid #dddddd;
+    padding: 5px 15px;
+    margin-top: 5px;
+    display: inline-block;
+    width: calc(50% - 3px);
+    position: relative;
+    cursor: pointer;
+    img {
+      display: inline-block !important;
+      margin: 0px !important;
+      right: 15px !important;
+      top: 9px;
+    }
+    svg {
+      display: inline-block !important;
+      margin: 0px !important;
+      right: 15px !important;
+      top: 9px;
+      position: absolute;
+      path {
+        fill: #254067;
+      }
+      line {
+        stroke: #254067;
+      }
+    }
+  }
+  div:first-child {
+    margin-right: 6px;
+  }
+`;
+const FilterSelectBox = styled.div`
+  width: 180px;
+  height: 239px;
+  background: #ffffff;
+  border: 1px solid #aaaaaa;
+  position: absolute;
+`;
+const Flex = styled.div`
+  display: flex;
+`;
+const Sort = styled.div`
+  p {
+    margin: 0px;
+    color: #254067;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .box {
+    color: #254067;
+    font-size: 0.75rem;
+    background: #f5f5f5 0% 0% no-repeat padding-box;
+    border: 1px solid #dddddd;
+    padding: 5px 15px;
+    margin-top: 5px;
+    img {
+      width: 10px;
+    }
+  }
+`;
+const Filter = styled.div`
+  p {
+    margin: 0px;
+    color: #254067;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .box {
+    color: #707070;
+    font-size: 0.75rem;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    padding: 5px 15px;
+    margin-top: 5px;
+    img {
+      width: 10px;
+    }
+`;
+
 const Pagination = styled.div`
   text-align: center;
   width: 100%;
@@ -323,6 +315,7 @@ const Pagination = styled.div`
 
 const DThbar = styled.div`
   border-right: 1px solid #dddddd;
+  cursor: pointer;
 `;
 const TableScroll = styled.div`
   overflow: scroll;
@@ -343,6 +336,25 @@ const Search = styled.input`
   padding: 0px 0px 0px 10px;
   margin: 7px 0px 0px 0px;
   border: solid 1px #aaaaaa;
+  background: #ffffff;
+  font-weight: 300;
+
+  ::placeholder {
+    color: #dddddd;
+  }
+  background-image: url(/images/search_icon.svg);
+  background-position: 135px;
+  background-repeat: no-repeat;
+`;
+const Search2 = styled.input`
+  font-size: 0.75rem;
+  width: 160px;
+  height: 27px;
+  color: rgba(59, 59, 59, 1);
+  margin-bottom: 20px;
+  padding: 0px 0px 0px 10px;
+  margin: 10px 0px 5px 0px;
+  border: solid 1px #dddddd;
   background: #ffffff;
   font-weight: 300;
 
@@ -422,6 +434,11 @@ const DatasetTable = styled.table`
     }
   }
 `;
+const Flex2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+`;
 const BlueButton = styled.button`
   position: absolute;
   margin: 7px 15px 0px 0px;
@@ -441,22 +458,6 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
 `;
-const Location = styled.div`
-  padding-left: 40px;
-  p {
-    color: #707070;
-    font-size: 0.75rem;
-    margin: 0px;
-  }
-  img {
-    margin: 0px 8px -2px 8px;
-    height: 14px;
-  }
-  span {
-    color: #254067;
-  }
-`;
-
 const Dataset = styled.div`
   position: relative;
   margin: 20px 40px 0px 40px;
@@ -472,4 +473,11 @@ const Dataset = styled.div`
     padding: 7px 0px 7px 15px;
     display: inline-block;
   }
+`;
+
+const FBox = styled.div`
+  border: 1px solid #dddddd;
+  height: 140px;
+  width: 160px;
+  overflow: scroll;
 `;

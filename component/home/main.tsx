@@ -34,7 +34,6 @@ const Flex = styled.div`
 `;
 
 const InlineFlex = styled.div`
-  width: calc(100% - 80px);
   margin: 20px 40px 20px 40px;
   min-width: 700px;
   h1 {

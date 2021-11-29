@@ -1,8 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import styled from "styled-components";
-import FilterSelec from "../../pages/filterselec";
-import React, { useState, Component } from "react";
+import FilterSelec from "../common/filterselec";
+import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
 import { unprotect } from "mobx-state-tree";
 import { IStore } from "../../store";
@@ -27,11 +25,53 @@ type Props = {
 
 @inject("store")
 @observer
-export default class ViewTable extends Component<Props> {
+export default class DynamicTable extends Component<Props> {
   render() {
     const { store } = this.props;
     unprotect(store);
 
+    const rendering = () => {
+      const result = [];
+      for (let i = 0; i < 40; i++) {
+        result.push(
+          <tr>
+            <td>
+              <a>19297</a>
+            </td>
+            <td>PPFbT1c005</td>
+            <td>-</td>
+            <td>Black</td>
+            <td>225</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+        );
+      }
+      return result;
+    };
     return (
       <>
         <Container>
@@ -87,16 +127,10 @@ export default class ViewTable extends Component<Props> {
                   }}
                 >
                   <th>
-                    <DThbar
-                      onClick={(event) => {
-                        const bloo = !store.isToggleOn;
-                        store.Toggle(bloo);
-                      }}
-                    >
+                    <DThbar>
                       ID
                       <Align />
                     </DThbar>
-                    {store.isToggleOn ? " " : <FilterSelec />}
                   </th>
                   <th>
                     <DThbar
@@ -146,128 +180,81 @@ export default class ViewTable extends Component<Props> {
                     </DThbar>
                     {store.isToggleOn5 ? " " : <FilterSelec />}
                   </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
+                  <th>
+                    <DThbar>2018/05/27</DThbar>
+                  </th>
                   <th></th>
                 </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a>19297</a>
-                  </td>
-                  <td>PPFbT1c005</td>
-                  <td>-</td>
-                  <td>Black</td>
-                  <td>225</td>
-                  <td></td>
-                </tr>
+                {rendering()}
               </DatasetTable>
             </TableScroll>
           </Dataset>
@@ -304,6 +291,7 @@ export default class ViewTable extends Component<Props> {
     );
   }
 }
+
 const Flex = styled.div`
   display: flex;
 `;
@@ -346,6 +334,7 @@ const Filter = styled.div`
       width: 10px;
     }
 `;
+
 const Pagination = styled.div`
   text-align: center;
   width: 100%;
@@ -392,14 +381,79 @@ const DatasetTable = styled.table`
   th:first-child {
     padding-left: 15px;
   }
-
-  th:not(:last-of-type) {
-    min-width: 140px;
-  }
-
   th:last-child {
     width: 100%;
   }
+  th:not(:last-of-type) {
+    min-width: 80px;
+  }
+  th:nth-child(1) {
+    background: #f2f2f2;
+    position: sticky;
+    left: 0px;
+    min-width: 100px;
+    z-index: 0;
+  }
+  th:nth-child(2) {
+    background: #f2f2f2;
+    position: sticky;
+    left: 100px;
+    min-width: 140px;
+    z-index: 0;
+  }
+  th:nth-child(3) {
+    background: #f2f2f2;
+    position: sticky;
+    min-width: 110px;
+    left: 240px;
+    z-index: 0;
+  }
+  th:nth-child(4) {
+    background: #f2f2f2;
+    position: sticky;
+    min-width: 110px;
+    left: 350px;
+    z-index: 0;
+  }
+  th:nth-child(5) {
+    background: #f2f2f2;
+    position: sticky;
+    min-width: 110px;
+    left: 460px;
+    z-index: 0;
+  }
+  td:nth-child(1) {
+    background: #fbfbfb;
+    position: sticky;
+    min-width: 100px;
+    left: 0;
+    z-index: 0;
+  }
+  td:nth-child(2) {
+    background: #fbfbfb;
+    position: sticky;
+    min-width: 140px;
+    left: 100px;
+  }
+  td:nth-child(3) {
+    background: #fbfbfb;
+    position: sticky;
+    min-width: 110px;
+    left: 240px;
+  }
+  td:nth-child(4) {
+    background: #fbfbfb;
+    position: sticky;
+    min-width: 110px;
+    left: 350px;
+  }
+  td:nth-child(5) {
+    background: #fbfbfb;
+    position: sticky;
+    min-width: 110px;
+    left: 460px;
+  }
+
   th {
     height: 40px;
     text-align: left;
@@ -408,6 +462,7 @@ const DatasetTable = styled.table`
     font-weight: 500;
     position: relative;
     padding-left: 8px;
+    z-index: -2;
     img {
       margin-bottom: -2px;
     }

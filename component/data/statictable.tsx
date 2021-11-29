@@ -1,8 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import styled from "styled-components";
-import FilterSelec from "../../pages/filterselec";
-import React, { useState, Component } from "react";
+import FilterSelec from "../common/filterselec";
+import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
 import { unprotect } from "mobx-state-tree";
 import { IStore } from "../../store";
@@ -44,30 +42,6 @@ export default class ViewTable extends Component<Props> {
             <td>-</td>
             <td>Black</td>
             <td>225</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
             <td></td>
           </tr>
         );
@@ -77,14 +51,7 @@ export default class ViewTable extends Component<Props> {
     return (
       <>
         <Container>
-          {" "}
-          <div
-            style={{
-              width: "100%",
-              padding: "0px 40px",
-              paddingTop: "20px",
-            }}
-          >
+          <SortFilter>
             <Flex>
               <Sort>
                 <p>Sort</p>
@@ -117,7 +84,7 @@ export default class ViewTable extends Component<Props> {
                 </div>
               </Filter>
             </Flex>
-          </div>
+          </SortFilter>
           <Dataset>
             <TableScroll>
               <DatasetTable>
@@ -130,16 +97,10 @@ export default class ViewTable extends Component<Props> {
                   }}
                 >
                   <th>
-                    <DThbar
-                      onClick={(event) => {
-                        const bloo = !store.isToggleOn;
-                        store.Toggle(bloo);
-                      }}
-                    >
+                    <DThbar>
                       ID
                       <Align />
                     </DThbar>
-                    {store.isToggleOn ? " " : <FilterSelec />}
                   </th>
                   <th>
                     <DThbar
@@ -189,78 +150,7 @@ export default class ViewTable extends Component<Props> {
                     </DThbar>
                     {store.isToggleOn5 ? " " : <FilterSelec />}
                   </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
-                  <th>
-                    <DThbar>2018/05/27</DThbar>
-                  </th>
+
                   <th></th>
                 </tr>
                 {rendering()}
@@ -301,6 +191,11 @@ export default class ViewTable extends Component<Props> {
   }
 }
 
+const SortFilter = styled.div`
+  width: 100%;
+  padding: 0px 40px;
+  padding-top: 20px;
+`;
 const Flex = styled.div`
   display: flex;
 `;
@@ -394,73 +289,7 @@ const DatasetTable = styled.table`
     width: 100%;
   }
   th:not(:last-of-type) {
-    min-width: 80px;
-  }
-  th:nth-child(1) {
-    background: #f2f2f2;
-    position: sticky;
-    left: 0px;
-    min-width: 100px;
-    z-index: 0;
-  }
-  th:nth-child(2) {
-    background: #f2f2f2;
-    position: sticky;
-    left: 100px;
     min-width: 140px;
-    z-index: 0;
-  }
-  th:nth-child(3) {
-    background: #f2f2f2;
-    position: sticky;
-    min-width: 110px;
-    left: 240px;
-    z-index: 0;
-  }
-  th:nth-child(4) {
-    background: #f2f2f2;
-    position: sticky;
-    min-width: 110px;
-    left: 350px;
-    z-index: 0;
-  }
-  th:nth-child(5) {
-    background: #f2f2f2;
-    position: sticky;
-    min-width: 110px;
-    left: 460px;
-    z-index: 0;
-  }
-  td:nth-child(1) {
-    background: #fbfbfb;
-    position: sticky;
-    min-width: 100px;
-    left: 0;
-    z-index: 0;
-  }
-  td:nth-child(2) {
-    background: #fbfbfb;
-    position: sticky;
-    min-width: 140px;
-    left: 100px;
-  }
-  td:nth-child(3) {
-    background: #fbfbfb;
-    position: sticky;
-    min-width: 110px;
-    left: 240px;
-  }
-  td:nth-child(4) {
-    background: #fbfbfb;
-    position: sticky;
-    min-width: 110px;
-    left: 350px;
-  }
-  td:nth-child(5) {
-    background: #fbfbfb;
-    position: sticky;
-    min-width: 110px;
-    left: 460px;
   }
 
   th {

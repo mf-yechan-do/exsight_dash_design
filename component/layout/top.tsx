@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -9,12 +8,7 @@ export default function HomeTop() {
         <Container>
           <Link href="/">
             <a>
-              <img
-                style={{ margin: "8px 0px" }}
-                src="/images/logo.svg"
-                alt="mofl logo"
-                height={24}
-              />
+              <Img src="/images/logo.svg" alt="mofl logo" height={24} />
             </a>
           </Link>
           <Nav>
@@ -56,6 +50,9 @@ export default function HomeTop() {
   );
 }
 
+const Img = styled.img`
+  margin: 8px 0px;
+`;
 const Bar = styled.div`
   margin: 0 10px;
   display: inline-block;

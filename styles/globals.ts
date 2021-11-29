@@ -2,6 +2,54 @@ import styled, { createGlobalStyle } from "styled-components";
 
 
 export const GlobalStyle = createGlobalStyle`
+.tab {
+  padding-top: 25px;
+  padding-left: 40px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  width: calc(100%);
+
+  h3 {
+    margin: 0;
+    color: #707070;
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 2px solid #707070;
+    margin-right: 20px;
+    padding: 0px 3px 5px;
+  }
+  .TabActive {
+    color: #254067;
+  }}
+.flex {
+  display: flex;
+}
+
+.active {
+  color: rgb(210, 167, 93);
+  font-weight: 500;
+}
+.location{ padding-top: 25px;
+  padding-left: 40px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  width: calc(100%);
+  p {
+    color: #707070;
+    font-size: 0.75rem;
+    margin: 0px;
+  }
+  img {
+    margin: 0px 8px -2px 8px;
+    height: 14px;
+  }
+  span {
+    color: #254067;
+  }
+}
 
 .barclosed {
   margin-left: -280px;
@@ -17,6 +65,10 @@ export const GlobalStyle = createGlobalStyle`
   font-size: 0.875rem !important;
 }
 input:focus {outline:1px solid rgba(37,64,103,1);}
+
+input,label {
+  cursor: pointer;
+}
 
 .slider.round:before {
   border-radius: 50%;
